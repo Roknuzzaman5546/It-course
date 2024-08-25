@@ -29,7 +29,7 @@ const Navbar = () => {
 
     return (
         <div>
-            <div className="navbar px-5 bg-gray-800 text-xl font-bold italic text-blue-600 p-2">
+            <div className="navbar px-5 bg-gray-800 text-xl font-bold italic text-white p-2">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -41,12 +41,12 @@ const Navbar = () => {
                     </div>
                     <Link className=" flex items-center justify-between" href={route('/')}>
                         <img className=" w-10 rounded-full" src={"/assets/home/logo.png"} alt="" />
-                        <a className="btn btn-ghost font-rubik text-blue-600 text-2xl font-bold font-Chinzel">IT tech</a>
+                        <a className=" btn btn-ghost font-serif text-xl">IT tech</a>
                     </Link>
                 </div>
                 <div className="navbar-end">
                     <div className="hidden lg:flex">
-                        <ul className="menu menu-horizontal px-1 text-blue-600">
+                        <ul className="menu menu-horizontal px-1">
                             {menu}
                         </ul>
                     </div>

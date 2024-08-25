@@ -14,7 +14,7 @@ const Classes = ({ item }) => {
                     </div>
                 </div>
                 <div className="mt-5 space-y-2 flex-col items-center">
-                    <h2 className=" text-2xl font-bold">{name}</h2>
+                    <h2 className=" text-2xl font-bold line-clamp-1">{name}</h2>
                     <p>{title}</p>
                     <p>Total enroll: {totalEnrolment}</p>
                     <Link to={`/class/${_id}`}><button className="">Show details</button></Link>
