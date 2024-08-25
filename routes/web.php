@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -20,6 +21,7 @@ use Inertia\Inertia;
 Route::get('/', function () {
     return Inertia::render('Home/Home');
 });
+Route::get('/allClasses', [HomeController::class, 'allclassIndex'])->name('all.class');
 
 
 Route::middleware('auth')->group(function () {
@@ -29,6 +31,8 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::group(['middleware' => ['auth']], function () {
+
+
     Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
 });
 

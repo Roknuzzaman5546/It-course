@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { Link } from "@inertiajs/react";
+import NavLink from "../NavLink";
 
 const Navbar = () => {
     const [user, setUser] = useState(false)
@@ -16,7 +17,9 @@ const Navbar = () => {
     const menu =
         <>
             <li><Link to='/'>Home</Link></li>
-            <li><Link to='/allclasses'>All classes</Link></li>
+            <li><NavLink href={route('all.class')} active={route().current('all.class')}>
+                All Class
+            </NavLink></li>
             <li><Link to='/techon'>Tech on it tech</Link></li>
         </>
 
