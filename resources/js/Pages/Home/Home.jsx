@@ -13,7 +13,7 @@ const Home = () => {
             <Head title="Dashboard" />
             <div>
                 <Banner></Banner>
-                <div className="w-11/12 mx-auto">
+                <div className="w-11/12 mx-auto overflow-hidden">
                     <Partnership></Partnership>
                     <Classcours></Classcours>
                     <Total></Total>

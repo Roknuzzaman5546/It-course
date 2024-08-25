@@ -20,7 +20,7 @@ use Inertia\Inertia;
 
 Route::get('/', function () {
     return Inertia::render('Home/Home');
-});
+})->name('/');
 Route::get('/allClasses', [HomeController::class, 'allclassIndex'])->name('all.class');
 
 
@@ -31,8 +31,7 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::group(['middleware' => ['auth']], function () {
-
-
+    Route::get('/TechIt', [HomeController::class, 'techIndex'])->name('tech.it');
     Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
 });
 

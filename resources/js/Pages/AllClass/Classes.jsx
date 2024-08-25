@@ -8,8 +8,8 @@ const Classes = ({ item }) => {
         <div>
             <div className="card bg-gray-800 shadow-xl text-white">
                 <div>
-                    <img className="h-56 relative w-full" src={img} alt="Shoes" />
-                    <div className="absolute bottom-0 top-10 left-56">
+                    <img className="h-48 relative w-full" src={img} alt="Shoes" />
+                    <div className="absolute bottom-0 top-0 left-0 ml-2 mt-2">
                         <p className="bg-gray-700 text-white p-1 rounded-md">$ {price}</p>
                     </div>
                 </div>

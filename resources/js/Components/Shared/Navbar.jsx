@@ -16,11 +16,15 @@ const Navbar = () => {
 
     const menu =
         <>
-            <li><Link to='/'>Home</Link></li>
+            <li><NavLink href={route('/')} active={route().current('/')}>
+                Home
+            </NavLink></li>
             <li><NavLink href={route('all.class')} active={route().current('all.class')}>
                 All Class
             </NavLink></li>
-            <li><Link to='/techon'>Tech on it tech</Link></li>
+            <li><NavLink href={route('tech.it')} active={route().current('tech.it')}>
+                Tech on It tech
+            </NavLink></li>
         </>
 
     return (
@@ -35,8 +39,10 @@ const Navbar = () => {
                             {menu}
                         </ul>
                     </div>
-                    <img className=" w-10 rounded-full" src={"/assets/home/logo.png"} alt="" />
-                    <a className="btn btn-ghost font-rubik text-blue-600 text-2xl font-bold font-Chinzel">IT tech</a>
+                    <Link className=" flex items-center justify-between" href={route('/')}>
+                        <img className=" w-10 rounded-full" src={"/assets/home/logo.png"} alt="" />
+                        <a className="btn btn-ghost font-rubik text-blue-600 text-2xl font-bold font-Chinzel">IT tech</a>
+                    </Link>
                 </div>
                 <div className="navbar-end">
                     <div className="hidden lg:flex">
