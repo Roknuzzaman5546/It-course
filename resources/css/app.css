@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.cardC {
+    transition: transform 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+
+.cardC:hover {
+    border: 1px solid black;
+    transform: scale(1.05);
+}
+
+.cardC:active {
+    transform: scale(0.95) rotateZ(1.7deg);
+}
