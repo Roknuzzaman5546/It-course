@@ -7,9 +7,9 @@ import Teaching from './Teaching';
 import Main from '@/Layouts/Main';
 import { Head } from '@inertiajs/react';
 
-const Home = () => {
+const Home = ({auth}) => {
     return (
-        <Main>
+        <Main auth={auth}>
             <Head title="Dashboard" />
             <div>
                 <Banner></Banner>

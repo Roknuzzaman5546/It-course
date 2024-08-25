@@ -4,7 +4,7 @@ import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 import { FreeMode, Pagination } from 'swiper/modules';
-import Title from '@/Components/Shared/Title';
+import Title from '../Shared/Title';
 
 
 const Classcours = () => {

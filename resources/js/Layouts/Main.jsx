@@ -1,11 +1,13 @@
-import Footer from "@/Components/Shared/Footer";
-import Navbar from "@/Components/Shared/Navbar";
+import Footer from "@/Pages/Shared/Footer";
+import Navbar from "@/Pages/Shared/Navbar";
 
 
-const Main = ({ children }) => {
+
+
+const Main = ({ children, auth }) => {
     return (
         <div className=" w-screen">
-            <Navbar></Navbar>
+            <Navbar auth={auth}></Navbar>
             {children}
             <Footer></Footer>
         </div>

@@ -1,10 +1,9 @@
 import { useContext, useEffect, useState } from "react";
 import { Link } from "@inertiajs/react";
-import NavLink from "../NavLink";
+import NavLink from "@/Components/NavLink";
 
-const Navbar = () => {
-    const [user, setUser] = useState(false)
-
+const Navbar = ({auth}) => {
+    console.log(auth)
     const handlLogout = () => {
         userLogout()
             .then(() => {
@@ -50,16 +49,16 @@ const Navbar = () => {
                             {menu}
                         </ul>
                     </div>
-                    {user ? <div className="dropdown dropdown-end">
+                    {auth?.user ? <div className="dropdown dropdown-end">
                         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                             <div className="w-10 rounded-full">
-                                <img src={user?.photoURL} alt="" />
+                                <img src={auth?.user.photo} alt="" />
                             </div>
                         </label>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] px-2 py-5 shadow bg-gray-800 rounded-box w-52">
                             <li>
                                 <a>
-                                    <h2 className=" uppercase">{user.displayName}</h2>
+                                    <h2 className=" uppercase">{auth?.user.name}</h2>
                                 </a>
                             </li>
                             <li><Link to="/dashbord/studentprofile">Dashbord</Link></li>

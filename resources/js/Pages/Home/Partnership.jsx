@@ -1,7 +1,7 @@
 import 'aos/dist/aos.css';
 import AOS from 'aos';
 import { useEffect } from 'react';
-import Title from '@/Components/Shared/Title';
+import Title from '../Shared/Title';
 
 
 const Partnership = () => {

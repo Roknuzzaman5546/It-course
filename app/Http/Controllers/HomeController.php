@@ -11,4 +11,8 @@ class HomeController extends Controller
     {
         return Inertia::render('AllClass/Allclasses');
     }
+    public function techIndex()
+    {
+        return Inertia::render('Techonit/Techonitbd');
+    }
 }
