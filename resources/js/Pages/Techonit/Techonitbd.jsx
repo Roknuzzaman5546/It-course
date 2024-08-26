@@ -1,9 +1,10 @@
+
 import InputError from "@/Components/InputError";
 import InputLabel from "@/Components/InputLabel";
 import PrimaryButton from "@/Components/PrimaryButton";
 import TextInput from "@/Components/TextInput";
 import Main from "@/Layouts/Main";
-import { useForm } from "@inertiajs/react";
+import { Head, useForm } from "@inertiajs/react";
 import Swal from "sweetalert2";
 import Title from "../Shared/Title";
 
@@ -39,6 +40,8 @@ const Techonitdb = ({auth}) => {
 
     return (
         <Main auth={auth}>
+            <Head title="Tech">
+            </Head>
             <div className="w-11/12 mx-auto my-10">
                 <div>
                     <Title
@@ -46,7 +49,7 @@ const Techonitdb = ({auth}) => {
                         heading={'Feel up the form'}
                     ></Title>
                 </div>
-                <div className=" bg-blue-300 px-5 py-8 space-y-2 rounded-md">
+                <div className=" px-5 py-5 space-y-2 rounded-md">
                     {/* <form onSubmit={onSubmit}>
                     <div className="form-control w-full">
                         <label className="label">
@@ -94,7 +97,7 @@ const Techonitdb = ({auth}) => {
                     </button>
                 </form> */}
                     <form onSubmit={submit}>
-                        <div className=' w-[80%] p-10 mx-auto bg-white rounded-md mt-5 mb-5'>
+                        <div className=' w-[80%] p-10 mx-auto bg-[#f3f1f6] rounded-md mt-2 mb-5'>
                             <div className=' flex items-center gap-1'>
                                 <div className=' w-1/2'>
                                     <InputLabel htmlFor="name" value="Name" />

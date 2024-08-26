@@ -10,7 +10,7 @@ import { Head } from '@inertiajs/react';
 const Home = ({auth}) => {
     return (
         <Main auth={auth}>
-            <Head title="Dashboard" />
+            <Head title="Home" />
             <div>
                 <Banner></Banner>
                 <div className="w-11/12 mx-auto overflow-hidden">

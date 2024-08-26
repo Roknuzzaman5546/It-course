@@ -13,11 +13,11 @@
                             <p className="bg-gray-700 text-white p-1 rounded-md text-xs">$ {price}</p>
                         </div>
                     </div>
-                    <div className="mt-2 pl-3 pb-2  flex flex-col">
-                        <h2 className=" text-sm font-bold line-clamp-1 mt-2">{name}</h2>
-                        <p className="text-xs my-1">{title}</p>
+                    <div className="mt-2 pl-3 pb-3">
+                        <h2 className=" text-sm font-bold line-clamp-1 mt-1 hover:text-blue-600 cursor-pointer">{name}</h2>
+                        <p className="text-xs mt-2">{title}</p>
                         <p className="text-xs">Total enroll: {totalEnrolment}</p>
-                        <button className=" text-left text-sm justify-end">
+                        <button className=" text-left text-sm inline button mt-1">
                             Show Details
                         </button>
                     </div>
