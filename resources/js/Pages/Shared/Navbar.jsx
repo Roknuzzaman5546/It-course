@@ -3,8 +3,8 @@ import { Link } from "@inertiajs/react";
 import NavLink from "@/Components/NavLink";
 
 const Navbar = ({auth}) => {
-    console.log(auth)
-    const handlLogout = () => {
+    // console.log(auth)
+    const handleLogout = () => {
         userLogout()
             .then(() => {
             })
@@ -23,6 +23,9 @@ const Navbar = ({auth}) => {
             </NavLink></li>
             <li><NavLink href={route('tech.it')} active={route().current('tech.it')}>
                 Tech on It tech
+            </NavLink></li>
+            <li><NavLink href={route('tech.it')} active={route().current('tech.it')}>
+                About us
             </NavLink></li>
         </>
 
@@ -62,7 +65,7 @@ const Navbar = ({auth}) => {
                                 </a>
                             </li>
                             <li><Link to="/dashbord/studentprofile">Dashbord</Link></li>
-                            <li><Link onClick={handlLogout}>Logout</Link></li>
+                            <li><Link onClick={handleLogout}>Logout</Link></li>
                         </ul>
                     </div> : <Link to="/login"><button className="btn">Login</button></Link>}
                 </div>
