@@ -13,7 +13,7 @@ const Techonitdb = ({auth}) => {
     const { data, setData, processing, errors, reset } = useForm({
         name: undefined,
         class_id: undefined,
-        email: undefined,
+        experience: undefined,
         phone: undefined,
         roll: undefined
     });
@@ -51,12 +51,6 @@ const Techonitdb = ({auth}) => {
                 </div>
                 <div className=" px-5 py-5 space-y-2 rounded-md">
                     {/* <form onSubmit={onSubmit}>
-                    <div className="form-control w-full">
-                        <label className="label">
-                            <span className="label-text">Name*</span>
-                        </label>
-                        <input type="text" placeholder="Type here" {...register("name", { required: true })} className="input input-bordered w-full" />
-                    </div>
                     <div className=" flex md:flex-row flex-col items-center gap-6">
                         <div className="form-control w-full">
                             <label className="label">
@@ -100,7 +94,7 @@ const Techonitdb = ({auth}) => {
                         <div className=' w-[80%] p-10 mx-auto bg-[#f3f1f6] rounded-md mt-2 mb-5'>
                             <div className=' flex items-center gap-1'>
                                 <div className=' w-1/2'>
-                                    <InputLabel htmlFor="name" value="Name" />
+                                    <InputLabel htmlFor="name" value="Name*" />
                                     <TextInput
                                         id="name"
                                         type="text"
@@ -117,19 +111,19 @@ const Techonitdb = ({auth}) => {
                             </div>
                             <div className=' flex items-center gap-1'>
                                 <div className=' my-2 w-1/2'>
-                                    <InputLabel htmlFor="email" value="Email" />
+                                    <InputLabel htmlFor="experience" value="Experience*" />
                                     <TextInput
-                                        id="email"
+                                        id="experience"
                                         type="text"
-                                        name="email"
-                                        value={data.email}
-                                        placeholder={'Your email'}
+                                        name="experience"
+                                        value={data.experience}
+                                        placeholder={'Your experience'}
                                         className="mt-1 block w-full p-2 text-black bg-gray-100"
-                                        autoComplete="email"
+                                        autoComplete="experience"
                                         isFocused={true}
-                                        onChange={(e) => setData('email', e.target.value)}
+                                        onChange={(e) => setData('experience', e.target.value)}
                                     />
-                                    <InputError message={errors.email} className="mt-2" />
+                                    <InputError message={errors.experience} className="mt-2" />
                                 </div>
                                 <div className=' my-2 w-1/2'>
                                     <InputLabel htmlFor="roll" value="Roll" />
@@ -160,7 +154,7 @@ const Techonitdb = ({auth}) => {
                                     isFocused={true}
                                     onChange={(e) => setData('phone', e.target.value)}
                                 />
-                                <InputError message={errors.email} className="mt-2" />
+                                <InputError message={errors.experience} className="mt-2" />
                             </div>
                             <div>
                                 <PrimaryButton className="mt-4 mx-auto" disabled={processing}>
