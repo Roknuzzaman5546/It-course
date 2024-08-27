@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { Link } from "@inertiajs/react";
 import NavLink from "@/Components/NavLink";
 
-const Navbar = ({auth}) => {
+const Navbar = ({ auth }) => {
     // console.log(auth)
     const handleLogout = () => {
         userLogout()
@@ -31,7 +31,7 @@ const Navbar = ({auth}) => {
 
     return (
         <div>
-            <div className="navbar px-5 bg-gray-800 text-xl font-bold italic text-white p-2">
+            <div className="navbar px-5 bg-gray-800 text-xl font-bold italic text-Z p-2">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -55,7 +55,7 @@ const Navbar = ({auth}) => {
                     {auth?.user ? <div className="dropdown dropdown-end">
                         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                             <div className="w-10 rounded-full">
-                            <img src={auth?.user?.profile_image ?? "/assets/user.png"} className='w-5 h-5 md:w-7 md:h-7 rounded-full' alt="user avater" />
+                                <img src={auth?.user?.profile_image ?? "/assets/user.png"} className='w-5 h-5 md:w-7 md:h-7 rounded-full' alt="user avater" />
                             </div>
                         </label>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] px-2 py-5 shadow bg-gray-800 rounded-box w-52">

@@ -9,13 +9,13 @@ import Swal from "sweetalert2";
 import Title from "../Shared/Title";
 
 
-const Techonitdb = ({auth}) => {
+const Techonitdb = ({ auth }) => {
     const { data, setData, processing, errors, reset } = useForm({
         name: undefined,
-        class_id: undefined,
+        title: undefined,
         experience: undefined,
         phone: undefined,
-        roll: undefined
+        category: undefined
     });
 
     const submit = async (data) => {
@@ -42,56 +42,17 @@ const Techonitdb = ({auth}) => {
         <Main auth={auth}>
             <Head title="Tech">
             </Head>
-            <div className="w-11/12 mx-auto my-10">
+            <div className="w-11/12 mx-auto mb-20 mt-4">
                 <div>
                     <Title
                         Subheading={"If you tech our site then fil up the form"}
                         heading={'Feel up the form'}
                     ></Title>
                 </div>
-                <div className=" px-5 py-5 space-y-2 rounded-md">
-                    {/* <form onSubmit={onSubmit}>
-                    <div className=" flex md:flex-row flex-col items-center gap-6">
-                        <div className="form-control w-full">
-                            <label className="label">
-                                <span className="label-text">Experience*</span>
-                            </label>
-                            <select {...register("experience", { required: true })}
-                                className="select select-bordered w-full">
-                                <option disabled defaultValue={"Please select"}>Please select</option>
-                                <option value="Beginner">Beginner</option>
-                                <option value="Experienced">Experienced</option>
-                                <option value="Some idea">Some idea</option>
-                            </select>
-                        </div>
-                        <div className="form-control w-full max-w-xs">
-                            <label className="label">
-                                <span className="label-text">Title</span>
-                            </label>
-                            <input type="text" {...register("title", { required: true })} placeholder="Type here" className="input input-bordered w-full max-w-xs" />
-                        </div>
-                    </div>
-                    <div className="form-control w-full">
-                        <label className="label">
-                            <span className="label-text">Category*</span>
-                        </label>
-                        <select {...register("category", { required: true })}
-                            className="select select-bordered w-full">
-                            <option disabled defaultValue={"Please select"}>Please select</option>
-                            <option value="webdevlopment">Web devlopment</option>
-                            <option value="digitalmarketing">Digital marketing</option>
-                            <option value="graphicdesign">Graphic Design</option>
-                            <option value="lernbasic">Leron basic js</option>
-                            <option value="data entry">Data entry</option>
-                        </select>
-                    </div>
-                    <br />
-                    <button className="btn mt-3 font-bold">
-                        Submit for review
-                    </button>
-                </form> */}
+                <div className=" px-5 rounded-md">
                     <form onSubmit={submit}>
                         <div className=' w-[80%] p-10 mx-auto bg-[#f3f1f6] rounded-md mt-2 mb-5'>
+                            {/* name & title */}
                             <div className=' flex items-center gap-1'>
                                 <div className=' w-1/2'>
                                     <InputLabel htmlFor="name" value="Name*" />
@@ -108,58 +69,55 @@ const Techonitdb = ({auth}) => {
                                     />
                                     <InputError message={errors.name} className="mt-2" />
                                 </div>
+                                <div className=' my-2 w-1/2'>
+                                    <InputLabel htmlFor="title" value="Title*" />
+                                    <TextInput
+                                        id="title"
+                                        type="text"
+                                        name="title"
+                                        value={data.title}
+                                        placeholder={'Your title'}
+                                        className="mt-1 block w-full p-2 text-black bg-gray-100"
+                                        autoComplete="title"
+                                        isFocused={true}
+                                        onChange={(e) => setData('title', e.target.value)}
+                                    />
+                                    <InputError message={errors.title} className="mt-2" />
+                                </div>
                             </div>
+                            {/* Experience & category */}
                             <div className=' flex items-center gap-1'>
-                                <div className=' my-2 w-1/2'>
-                                    <InputLabel htmlFor="experience" value="Experience*" />
-                                    <TextInput
-                                        id="experience"
-                                        type="text"
-                                        name="experience"
-                                        value={data.experience}
-                                        placeholder={'Your experience'}
-                                        className="mt-1 block w-full p-2 text-black bg-gray-100"
-                                        autoComplete="experience"
-                                        isFocused={true}
+                                <div className='my-2 w-1/2'>
+                                    <InputLabel htmlFor="experience" value="Experience" />
+                                    <select
+                                        className="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm w-full mt-1 text-black bg-gray-100"
                                         onChange={(e) => setData('experience', e.target.value)}
-                                    />
-                                    <InputError message={errors.experience} className="mt-2" />
+                                    >
+                                        <option disabled selected>Select Experience</option>
+                                        <option value={data.experience}>Beginner</option>
+                                        <option value={data.experience}>Some idea</option>
+                                        <option value={data.experience}>Experienced</option>
+                                    </select>
                                 </div>
-                                <div className=' my-2 w-1/2'>
-                                    <InputLabel htmlFor="roll" value="Roll" />
-                                    <TextInput
-                                        id="roll"
-                                        type="text"
-                                        name="roll"
-                                        value={data.roll}
-                                        placeholder={'Your roll'}
-                                        className="mt-1 block w-full p-2 text-black bg-gray-100"
-                                        autoComplete="roll"
-                                        isFocused={true}
-                                        onChange={(e) => setData('roll', e.target.value)}
-                                    />
-                                    <InputError message={errors.roll} className="mt-2" />
+                                <div className='my-2 w-1/2'>
+                                    <InputLabel htmlFor="category" value="Category" />
+                                    <select
+                                        className="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm w-full mt-1 text-black bg-gray-100"
+                                        onChange={(e) => setData('category', e.target.value)}
+                                    >
+                                        <option disabled selected>Select category</option>
+                                        <option value={data.category}>Data entry</option>
+                                        <option value={data.category}>Learn basic js</option>
+                                        <option value={data.category}>Graphic Design</option>
+                                        <option value={data.category}>Digital marketing</option>
+                                        <option value={data.category}>Web development</option>
+                                    </select>
                                 </div>
                             </div>
-                            <div className=' my-2'>
-                                <InputLabel htmlFor="phone" value="Phone" />
-                                <TextInput
-                                    id="phone"
-                                    type="text"
-                                    name="phone"
-                                    value={data.phone}
-                                    placeholder={'Your phone'}
-                                    className="mt-1 block w-full p-2 text-black bg-gray-100"
-                                    autoComplete="phone"
-                                    isFocused={true}
-                                    onChange={(e) => setData('phone', e.target.value)}
-                                />
-                                <InputError message={errors.experience} className="mt-2" />
-                            </div>
-                            <div>
-                                <PrimaryButton className="mt-4 mx-auto" disabled={processing}>
-                                    Add
-                                </PrimaryButton>
+                            <div className=" mt-3">
+                                <button className=" mx-auto box butt" disabled={processing}>
+                                    Submit
+                                </button>
                             </div>
                         </div>
                     </form>
