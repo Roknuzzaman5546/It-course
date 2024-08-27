@@ -33,7 +33,7 @@ const Partnership = () => {
                     <h2>At the heart of our success is the collaboration with IT clan, a trailblazer in [relevant field]. By merging our strengths.</h2>
                 </div>
                 <div data-aos="zoom-out" className='text-center flex flex-col bg-gray-800 h-60 justify-center p-2 rounded text-white font-rancho items-center gap-2'>
-                    <img className=' w-20 h-20 rounded' src={'/assets/home/partimage4.jpg'} alt="" />
+                    <img className=' w-20 h-20 rounded' src={'/assets/home/partimage4.png'} alt="" />
                     <h2>Dedicated to excellence, Kazi Ltd...stands as a cornerstone in [industry/domain]. Our partnership extends beyond conventional.</h2>
                 </div>
             </div>

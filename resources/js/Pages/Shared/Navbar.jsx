@@ -24,7 +24,7 @@ const Navbar = ({auth}) => {
             <li><NavLink href={route('tech.it')} active={route().current('tech.it')}>
                 Tech on It tech
             </NavLink></li>
-            <li><NavLink href={route('tech.it')} active={route().current('tech.it')}>
+            <li><NavLink href={route('about.us')} active={route().current('about.us')}>
                 About us
             </NavLink></li>
         </>
@@ -55,7 +55,7 @@ const Navbar = ({auth}) => {
                     {auth?.user ? <div className="dropdown dropdown-end">
                         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                             <div className="w-10 rounded-full">
-                                <img src={auth?.user.photo} alt="" />
+                            <img src={auth?.user?.profile_image ?? "/assets/user.png"} className='w-5 h-5 md:w-7 md:h-7 rounded-full' alt="user avater" />
                             </div>
                         </label>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] px-2 py-5 shadow bg-gray-800 rounded-box w-52">

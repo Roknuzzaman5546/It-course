@@ -31,7 +31,8 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::group(['middleware' => ['auth']], function () {
-    Route::get('/TechIt', [HomeController::class, 'techIndex'])->name('tech.it');
+    Route::get('/aboutUs', [HomeController::class, 'aboutIndex'])->name('about.us');
+    Route::get('/techIt', [HomeController::class, 'techIndex'])->name('tech.it');
     Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
 });
 

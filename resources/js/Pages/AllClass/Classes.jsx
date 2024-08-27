@@ -1,4 +1,5 @@
     import { Link } from "@inertiajs/react";
+    import { FaArrowRight } from "react-icons/fa6";
 
 
     const Classes = ({ item }) => {
@@ -17,8 +18,8 @@
                         <h2 className=" text-sm font-bold line-clamp-1 mt-1 hover:text-blue-600 cursor-pointer">{name}</h2>
                         <p className="text-xs mt-2">{title}</p>
                         <p className="text-xs">Total enroll: {totalEnrolment}</p>
-                        <button className=" text-left text-sm inline buttn mt-1">
-                            Show Details
+                        <button className=" text-sm flex items-center justify-center gap-1 buttn mt-2">
+                            Show Details <FaArrowRight></FaArrowRight>
                         </button>
                     </div>
                 </div>

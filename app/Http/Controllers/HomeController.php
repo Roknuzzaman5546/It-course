@@ -15,4 +15,8 @@ class HomeController extends Controller
     {
         return Inertia::render('Techonit/Techonitbd');
     }
+    public function aboutIndex()
+    {
+        return Inertia::render('About/AboutUs');
+    }
 }

@@ -26,7 +26,7 @@
     transition-duration: 400ms;
     transition-property: color;
   }
-  
+
 
 .buttn:focus,
 .buttn:hover {
@@ -53,15 +53,15 @@
   transition-property: width, left;
 }
 
-/* From Uiverse.io by Cornerstone-04 */ 
+/* From Uiverse.io by Cornerstone-04 */
 .box {
   transition: .5s linear;
   position: relative;
   overflow: hidden;
-  padding: 15px;
+  padding: 12px;
   text-align: center;
   margin: 0 5px;
-  background: transparent;
+  background: white;
   text-transform: uppercase;
   font-weight: 900;
 }
@@ -116,5 +116,5 @@
   cursor: pointer;
   outline: none;
   border: none;
-  background: transparent;
+  background: white;
 }
