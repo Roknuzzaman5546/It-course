@@ -83,7 +83,7 @@ const AboutUs = ({ auth }) => {
             </div>
             {/* Our teacher */}
             <h2 className=' text-3xl font-bold font-rancho text-center my-16'>Our team</h2>
-            <div className=' md:w-4/5 w-[95%] mx-auto flex md:flex-row flex-col gap-8'>
+            <div className=' md:w-4/5 w-[95%] mx-auto flex md:flex-row flex-col gap-8 mb-16'>
                 <div>
                     <img src={'/assets/about/team-1.jpg'} alt="" />
                     <h2 className=' text-xl font-extrabold'>Johnny walker</h2>
@@ -93,21 +93,21 @@ const AboutUs = ({ auth }) => {
                 </div>
                 <div>
                     <img src={'/assets/about/team-2.jpg'} alt="" />
-                    <h2 className=' text-xl font-extrabold'>Johnny walker</h2>
+                    <h2 className=' text-xl font-extrabold'>Azim iyafu</h2>
                     <h3 className='mb-2 font-bold text-gray-500'>Web designer</h3>
                     <hr />
                     <p className=' mt-2 font-bold text-gray-500'>Vestibulum porttitor egestas orci, vitae ullamcorper risus rutrum massa quis.</p>
                 </div>
                 <div>
                     <img src={'/assets/about/team-3.jpg'} alt="" />
-                    <h2 className=' text-xl font-extrabold'>Johnny walker</h2>
+                    <h2 className=' text-xl font-extrabold'>Nixim monir</h2>
                     <h3 className='mb-2 font-bold text-gray-500'>Web designer</h3>
                     <hr />
                     <p className=' mt-2 font-bold text-gray-500'>Vestibulum porttitor egestas orci, vitae ullamcorper risus rutrum massa quis.</p>
                 </div>
                 <div>
                     <img src={'/assets/about/team-4.jpg'} alt="" />
-                    <h2 className=' text-xl font-extrabold'>Johnny walker</h2>
+                    <h2 className=' text-xl font-extrabold'>Yang chu</h2>
                     <h3 className='mb-2 font-bold text-gray-500'>Web designer</h3>
                     <hr />
                     <p className=' mt-2 font-bold text-gray-500'>Vestibulum porttitor egestas orci, vitae ullamcorper risus rutrum massa quis.</p>
