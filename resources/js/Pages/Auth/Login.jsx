@@ -1,6 +1,6 @@
 import Checkbox from '@/Components/Checkbox';
 import './login.css'
-import { Link, useForm } from '@inertiajs/react';
+import { Head, Link, useForm } from '@inertiajs/react';
 import TextInput from '@/Components/TextInput';
 import InputError from '@/Components/InputError';
 import PrimaryButton from '@/Components/PrimaryButton';
@@ -27,6 +27,7 @@ const Login = ({ status, canResetPassword }) => {
     };
     return (
         <div className='loginbg bg-fixed'>
+            <Head title='Login' />
             {status && <div className="mb-4 font-medium text-sm text-green-600">{status}</div>}
             <div className="hero min-h-screen py-10 backdrop-blur-sm">
                 <div className="hero-content flex-col lg:flex-row gap-3">
@@ -36,7 +37,7 @@ const Login = ({ status, canResetPassword }) => {
                     </div>
                     <div className="card shadow-2xl backdrop-blur-xl lg:w-1/2 w-full">
                         <form onSubmit={submit} className="card-body">
-                            <h1 className="text-5xl font-bold">Login now!</h1>
+                            <h1 className="text-5xl font-bold text-black">Login now!</h1>
                             {/* Email */}
                             <div className="form-control">
                                 <label className="label">

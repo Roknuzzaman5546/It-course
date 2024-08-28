@@ -6,6 +6,7 @@ import Total from './Total';
 import Teaching from './Teaching';
 import Main from '@/Layouts/Main';
 import { Head } from '@inertiajs/react';
+import ItShow from './ItShow';
 
 const Home = ({auth}) => {
     return (
@@ -17,6 +18,7 @@ const Home = ({auth}) => {
                     <Partnership></Partnership>
                     <Classcours></Classcours>
                     <Total></Total>
+                    <ItShow></ItShow>
                     <Teaching></Teaching>
                 </div>
             </div>

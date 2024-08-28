@@ -1,4 +1,4 @@
-import { Link, useForm } from '@inertiajs/react';
+import { Head, Link, useForm } from '@inertiajs/react';
 import './login.css'
 import { useEffect } from 'react';
 import TextInput from '@/Components/TextInput';
@@ -30,11 +30,12 @@ const Register = () => {
 
     return (
         <div className='loginbg bg-fixed'>
+            <Head title='Register' />
             <div className="hero min-h-screen py-10 backdrop-blur-sm">
                 <div className="hero-content lg:w-1/2 w-11/12">
                     <div className="card shadow-2xl backdrop-blur-xl w-full">
                         <form onSubmit={submit} className="card-body">
-                            <h1 className="text-5xl font-bold text-center">Register!</h1>
+                            <h1 className="text-5xl font-bold text-center text-black">Register!</h1>
                             {/* name */}
                             <div className="form-control">
                                 <label className="label">
