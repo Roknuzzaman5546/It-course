@@ -10,7 +10,7 @@ const Banner = () => {
                         <h1 className="mb-5 text-7xl font-bold">IT <span className=' text-blue-600'>Tech</span></h1>
                         <p className="mb-5 font-rancho">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
                         <Link href={route('all.class')}>
-                            <button className=" butt box"> See our classes</button>
+                            <button className=" butt box"> See our classes</button>                    
                         </Link>
                     </div>
                 </div>
