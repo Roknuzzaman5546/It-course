@@ -20,7 +20,7 @@ const AboutUs = ({ auth }) => {
                     </div>
                 </div>
             </div>
-            <div className=' w-4/5 mx-auto'>
+            <div className='  w-4/5 mx-auto'>
                 {/* About us header section */}
                 <h2 className=' text-3xl font-bold font-rancho text-center my-16'>About us</h2>
                 {/* Our comany section */}
@@ -47,19 +47,70 @@ const AboutUs = ({ auth }) => {
                         <p className=' space-y-2 text-gray-600 font-rancho mt-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam neque culpa a, laudantium autem, in totam vel doloremque nobis repudiandae asperiores dolores corporis alias iure cupiditate. Blanditiis voluptatum autem amet! </p>
                     </div>
                 </div>
-                {/* count section */}
             </div>
-            <div className=' bg-[#f4f3ee] py-24 my-10'>
-                <div className=' w-11/12'>
-                    <div>
-                        <h4>10+</h4>
-                        <div>
-                            <MdOutlineEmail />
+            {/* count section */}
+            <div className=' bg-[#f4f3ee]  my-10'>
+                <div className=' md:w-11/12 w-full flex md:flex-row flex-col justify-center items-center'>
+                    <div className=' flex flex-col justify-center items-center gap-2 md:w-[20%] w-full py-10'>
+                        <h4 className=' text-2xl font-extrabold text-[#3730A3] font-rancho'>10+</h4>
+                        <div className=' bg-white h-20 w-20 rounded-full flex flex-col items-center justify-center'>
+                            <MdOutlineEmail className=' text-4xl' />
                         </div>
+                        <p className=' text-gray-500'>years</p>
                     </div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                    <div className=' flex flex-col justify-center items-center gap-2 md:w-[20%] w-full py-10 md:border-l-2 border-l-0 md:border-t-0 border-t-2'>
+                        <h4 className=' text-2xl font-extrabold text-[#3730A3] font-rancho'>100+</h4>
+                        <div className=' bg-white h-20 w-20 rounded-full flex flex-col items-center justify-center'>
+                            <MdOutlineEmail className=' text-4xl' />
+                        </div>
+                        <p className=' text-gray-500'>Clints</p>
+                    </div>
+                    <div className=' flex flex-col justify-center items-center gap-2 md:w-[20%] w-full py-10 md:border-l-2 border-l-0 md:border-t-0 border-t-2'>
+                        <h4 className=' text-2xl font-extrabold text-[#3730A3] font-rancho'>50+</h4>
+                        <div className=' bg-white h-20 w-20 rounded-full flex flex-col items-center justify-center'>
+                            <MdOutlineEmail className=' text-4xl' />
+                        </div>
+                        <p className=' text-gray-500'>Shops</p>
+                    </div>
+                    <div className=' flex flex-col justify-center items-center gap-2 md:w-[20%] w-full py-10 md:border-l-2 border-l-0 md:border-t-0 border-t-2'>
+                        <h4 className=' text-2xl font-extrabold text-[#3730A3] font-rancho'>20M+</h4>
+                        <div className=' bg-white h-20 w-20 rounded-full flex flex-col items-center justify-center'>
+                            <MdOutlineEmail className=' text-4xl' />
+                        </div>
+                        <p className=' text-gray-500'>Shops</p>
+                    </div>
+                </div>
+            </div>
+            {/* Our teacher */}
+            <h2 className=' text-3xl font-bold font-rancho text-center my-16'>Our team</h2>
+            <div className=' md:w-4/5 w-[95%] mx-auto flex md:flex-row flex-col gap-8'>
+                <div>
+                    <img src={'/assets/about/team-1.jpg'} alt="" />
+                    <h2 className=' text-xl font-extrabold'>Johnny walker</h2>
+                    <h3 className='mb-2 font-bold text-gray-500'>Web designer</h3>
+                    <hr />
+                    <p className=' mt-2 font-bold text-gray-500'>Vestibulum porttitor egestas orci, vitae ullamcorper risus rutrum massa quis.</p>
+                </div>
+                <div>
+                    <img src={'/assets/about/team-2.jpg'} alt="" />
+                    <h2 className=' text-xl font-extrabold'>Johnny walker</h2>
+                    <h3 className='mb-2 font-bold text-gray-500'>Web designer</h3>
+                    <hr />
+                    <p className=' mt-2 font-bold text-gray-500'>Vestibulum porttitor egestas orci, vitae ullamcorper risus rutrum massa quis.</p>
+                </div>
+                <div>
+                    <img src={'/assets/about/team-3.jpg'} alt="" />
+                    <h2 className=' text-xl font-extrabold'>Johnny walker</h2>
+                    <h3 className='mb-2 font-bold text-gray-500'>Web designer</h3>
+                    <hr />
+                    <p className=' mt-2 font-bold text-gray-500'>Vestibulum porttitor egestas orci, vitae ullamcorper risus rutrum massa quis.</p>
+                </div>
+                <div>
+                    <img src={'/assets/about/team-4.jpg'} alt="" />
+                    <h2 className=' text-xl font-extrabold'>Johnny walker</h2>
+                    <h3 className='mb-2 font-bold text-gray-500'>Web designer</h3>
+                    <hr />
+                    <p className=' mt-2 font-bold text-gray-500'>Vestibulum porttitor egestas orci, vitae ullamcorper risus rutrum massa quis.</p>
                 </div>
             </div>
         </Main>
