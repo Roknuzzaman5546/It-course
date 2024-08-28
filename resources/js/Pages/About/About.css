@@ -1,0 +1,6 @@
+.aboutbgimg {
+    background-image: url('/assets/about/about-header.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
