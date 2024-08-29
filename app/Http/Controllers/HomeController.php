@@ -19,4 +19,8 @@ class HomeController extends Controller
     {
         return Inertia::render('About/AboutUs');
     }
+    public function faqIndex()
+    {
+        return Inertia::render('Faq/Faq');
+    }
 }
