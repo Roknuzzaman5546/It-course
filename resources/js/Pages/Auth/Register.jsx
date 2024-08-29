@@ -9,7 +9,7 @@ const Register = () => {
         name: '',
         phone: '',
         email: '',
-        photo: '',
+        profilePhoto: '',
         password: '',
         password_confirmation: '',
     });
@@ -52,6 +52,7 @@ const Register = () => {
                                     onChange={(e) => setData('name', e.target.value)}
                                     required
                                 />
+                                <InputError message={errors.name} className="mt-2" />
                             </div>
                             {/* phone */}
                             <div className="form-control">
@@ -69,6 +70,7 @@ const Register = () => {
                                     onChange={(e) => setData('phone', e.target.value)}
                                     required
                                 />
+                                <InputError message={errors.phone} className="mt-2" />
                             </div>
                             {/* Photo */}
                             <div className="form-control">
@@ -76,16 +78,17 @@ const Register = () => {
                                     <span className="label-text">Photo url*</span>
                                 </label>
                                 <TextInput
-                                    id="photo"
-                                    name="photo"
-                                    value={data.photo}
+                                    id="profilePhoto"
+                                    name="profilePhoto"
+                                    value={data.profilePhoto}
                                     className="mt-1 block w-full"
                                     placeholder={'Photo url'}
-                                    autoComplete="photo"
+                                    autoComplete="profilePhoto"
                                     isFocused={true}
-                                    onChange={(e) => setData('photo', e.target.value)}
+                                    onChange={(e) => setData('profilePhoto', e.target.value)}
                                     required
                                 />
+                                <InputError message={errors.profilePhoto} className="mt-2" />
                             </div>
                             {/* email */}
                             <div className="form-control">

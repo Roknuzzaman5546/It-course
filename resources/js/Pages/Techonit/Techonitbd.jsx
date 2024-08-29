@@ -10,32 +10,16 @@ import Title from "../Shared/Title";
 
 
 const Techonitdb = ({ auth }) => {
-    const { data, setData, processing, errors, reset } = useForm({
+    const { data, setData, processing, errors, post, reset } = useForm({
         name: undefined,
         title: undefined,
         experience: undefined,
-        phone: undefined,
         category: undefined
     });
 
-    const submit = async (data) => {
-        console.log(data)
-        const applyform = {
-            name: data.name,
-            image: user?.photoURL,
-            experience: data.experience,
-            title: data.title,
-            status: 'pending',
-            email: user?.email,
-            category: data.category
-        }
-        console.log(applyform)
-        axiospublic.post('/teacherreq', applyform)
-            .then(res => {
-                console.log(res.data)
-                Swal.fire("Request has been submited!");
-                reset();
-            })
+    const submit = (e) => {
+        e.preventDefault();
+        post(route('store.teacherReq'))
     }
 
     return (
@@ -90,7 +74,7 @@ const Techonitdb = ({ auth }) => {
                                 <div className='my-2 w-1/2'>
                                     <InputLabel htmlFor="experience" value="Experience" />
                                     <select
-                                        className="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm w-full mt-1 text-black bg-gray-100"
+                                        className="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm w-full mt-1 text-black bg-gray-100 cursor-pointer"
                                         onChange={(e) => setData('experience', e.target.value)}
                                     >
                                         <option disabled selected>Select Experience</option>
@@ -102,7 +86,7 @@ const Techonitdb = ({ auth }) => {
                                 <div className='my-2 w-1/2'>
                                     <InputLabel htmlFor="category" value="Category" />
                                     <select
-                                        className="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm w-full mt-1 text-black bg-gray-100"
+                                        className="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm w-full mt-1 text-black bg-gray-100 cursor-pointer"
                                         onChange={(e) => setData('category', e.target.value)}
                                     >
                                         <option disabled selected>Select category</option>
@@ -115,7 +99,7 @@ const Techonitdb = ({ auth }) => {
                                 </div>
                             </div>
                             <div className=" mt-3">
-                                <button className=" mx-auto box butt" disabled={processing}>
+                                <button type="submit" className=" mx-auto box butt" disabled={processing}>
                                     Submit
                                 </button>
                             </div>
