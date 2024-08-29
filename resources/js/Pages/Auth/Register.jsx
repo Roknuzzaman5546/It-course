@@ -3,6 +3,7 @@ import './login.css'
 import { useEffect } from 'react';
 import TextInput from '@/Components/TextInput';
 import PrimaryButton from '@/Components/PrimaryButton';
+import InputError from '@/Components/InputError';
 
 const Register = () => {
     const { data, setData, post, processing, errors, reset } = useForm({
@@ -106,6 +107,7 @@ const Register = () => {
                                     onChange={(e) => setData('email', e.target.value)}
                                     required
                                 />
+                                <InputError message={errors.email} className="mt-2" />
                             </div>
                             {/* Password */}
                             <div className="form-control">
@@ -123,6 +125,7 @@ const Register = () => {
                                     onChange={(e) => setData('password', e.target.value)}
                                     required
                                 />
+                                <InputError message={errors.password} className="mt-2" />
                             </div>
                             {/* confirm password */}
                             <div className="form-control">
@@ -140,6 +143,7 @@ const Register = () => {
                                     onChange={(e) => setData('password_confirmation', e.target.value)}
                                     required
                                 />
+                                <InputError message={errors.password_confirmation} className="mt-2" />
                             </div>
                             <h2 className=" text-white">If You have in an account go to <Link href={route('login')}><span className=' text-blue-500 font-bold text-xl'>Log in</span></Link></h2>
                             <div className="flex items-center justify-end mt-4">
