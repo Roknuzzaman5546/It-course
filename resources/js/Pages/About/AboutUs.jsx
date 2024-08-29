@@ -4,6 +4,9 @@ import React from 'react';
 import './About.css'
 import NavLink from '@/Components/NavLink';
 import { MdOutlineEmail } from "react-icons/md";
+import { FaHouseDamage } from "react-icons/fa";
+import { GoLink } from "react-icons/go";
+import { FaUserFriends } from "react-icons/fa";
 
 const AboutUs = ({ auth }) => {
     return (
@@ -50,7 +53,7 @@ const AboutUs = ({ auth }) => {
             </div>
             {/* count section */}
             <div className=' bg-[#f4f3ee]  my-10'>
-                <div className=' md:w-11/12 w-full flex md:flex-row flex-col justify-center items-center'>
+                <div className=' md:w-11/12 mx-auto w-full flex md:flex-row flex-col justify-center items-center'>
                     <div className=' flex flex-col justify-center items-center gap-2 md:w-[20%] w-full py-10'>
                         <h4 className=' text-2xl font-extrabold text-[#3730A3] font-rancho'>10+</h4>
                         <div className=' bg-white h-20 w-20 rounded-full flex flex-col items-center justify-center'>
@@ -61,21 +64,21 @@ const AboutUs = ({ auth }) => {
                     <div className=' flex flex-col justify-center items-center gap-2 md:w-[20%] w-full py-10 md:border-l-2 border-l-0 md:border-t-0 border-t-2'>
                         <h4 className=' text-2xl font-extrabold text-[#3730A3] font-rancho'>100+</h4>
                         <div className=' bg-white h-20 w-20 rounded-full flex flex-col items-center justify-center'>
-                            <MdOutlineEmail className=' text-4xl' />
+                            <FaUserFriends className=' text-3xl' />
                         </div>
                         <p className=' text-gray-500'>Clints</p>
                     </div>
                     <div className=' flex flex-col justify-center items-center gap-2 md:w-[20%] w-full py-10 md:border-l-2 border-l-0 md:border-t-0 border-t-2'>
                         <h4 className=' text-2xl font-extrabold text-[#3730A3] font-rancho'>50+</h4>
                         <div className=' bg-white h-20 w-20 rounded-full flex flex-col items-center justify-center'>
-                            <MdOutlineEmail className=' text-4xl' />
+                            <FaHouseDamage className=' text-3xl' />
                         </div>
                         <p className=' text-gray-500'>Shops</p>
                     </div>
                     <div className=' flex flex-col justify-center items-center gap-2 md:w-[20%] w-full py-10 md:border-l-2 border-l-0 md:border-t-0 border-t-2'>
                         <h4 className=' text-2xl font-extrabold text-[#3730A3] font-rancho'>20M+</h4>
                         <div className=' bg-white h-20 w-20 rounded-full flex flex-col items-center justify-center'>
-                            <MdOutlineEmail className=' text-4xl' />
+                            <GoLink className=' text-3xl' />
                         </div>
                         <p className=' text-gray-500'>Shops</p>
                     </div>
@@ -83,34 +86,46 @@ const AboutUs = ({ auth }) => {
             </div>
             {/* Our teacher */}
             <h2 className=' text-3xl font-bold font-rancho text-center my-16'>Our team</h2>
-            <div className=' md:w-4/5 w-[95%] mx-auto flex md:flex-row flex-col gap-8 mb-16'>
+            <div className=' md:w-4/5 w-[95%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16'>
                 <div>
-                    <img src={'/assets/about/team-1.jpg'} alt="" />
-                    <h2 className=' text-xl font-extrabold'>Johnny walker</h2>
+                    <div className="aboutteamimg-1 rounded-md overflow-hidden">
+                        <div className="h-80 bg-transparent hover:bg-[#2b2b2bb2] transition-colors duration-500 ease-in-out">
+                        </div>
+                    </div>
+                    <h2 className=' text-xl font-extrabold mt-2 mb-1'>Johnny walker</h2>
                     <h3 className='mb-2 font-bold text-gray-500'>Web designer</h3>
                     <hr />
-                    <p className=' mt-2 font-bold text-gray-500'>Vestibulum porttitor egestas orci, vitae ullamcorper risus rutrum massa quis.</p>
+                    <p className=' mt-2 font-bold text-gray-500 space-y-1'>Vestibulum porttitor egestas orci, vitae ullamcorper risus rutrum massa quis.</p>
                 </div>
                 <div>
-                    <img src={'/assets/about/team-2.jpg'} alt="" />
-                    <h2 className=' text-xl font-extrabold'>Azim iyafu</h2>
+                    <div className="aboutteamimg-2 rounded-md overflow-hidden">
+                        <div className="h-80 bg-transparent hover:bg-[#2b2b2bb2] transition-colors duration-500 ease-in-out">
+                        </div>
+                    </div>
+                    <h2 className=' text-xl font-extrabold mt-2 mb-1'>Azim iyafu</h2>
                     <h3 className='mb-2 font-bold text-gray-500'>Web designer</h3>
                     <hr />
-                    <p className=' mt-2 font-bold text-gray-500'>Vestibulum porttitor egestas orci, vitae ullamcorper risus rutrum massa quis.</p>
+                    <p className=' mt-2 font-bold text-gray-500 space-y-1'>Vestibulum porttitor egestas orci, vitae ullamcorper risus rutrum massa quis.</p>
                 </div>
                 <div>
-                    <img src={'/assets/about/team-3.jpg'} alt="" />
-                    <h2 className=' text-xl font-extrabold'>Nixim monir</h2>
+                    <div className="aboutteamimg-3 rounded-md overflow-hidden">
+                        <div className="h-80 bg-transparent hover:bg-[#2b2b2bb2] transition-colors duration-500 ease-in-out">
+                        </div>
+                    </div>
+                    <h2 className=' text-xl font-extrabold mt-2 mb-1'>Nixim monir</h2>
                     <h3 className='mb-2 font-bold text-gray-500'>Web designer</h3>
                     <hr />
-                    <p className=' mt-2 font-bold text-gray-500'>Vestibulum porttitor egestas orci, vitae ullamcorper risus rutrum massa quis.</p>
+                    <p className=' mt-2 font-bold text-gray-500 space-y-1'>Vestibulum porttitor egestas orci, vitae ullamcorper risus rutrum massa quis.</p>
                 </div>
                 <div>
-                    <img src={'/assets/about/team-4.jpg'} alt="" />
-                    <h2 className=' text-xl font-extrabold'>Yang chu</h2>
+                    <div className="aboutteamimg-4 rounded-md overflow-hidden">
+                        <div className="h-80 bg-transparent hover:bg-[#2b2b2bb2] transition-colors duration-500 ease-in-out">
+                        </div>
+                    </div>
+                    <h2 className=' text-xl font-extrabold mt-2 mb-1'>Yang chu</h2>
                     <h3 className='mb-2 font-bold text-gray-500'>Web designer</h3>
                     <hr />
-                    <p className=' mt-2 font-bold text-gray-500'>Vestibulum porttitor egestas orci, vitae ullamcorper risus rutrum massa quis.</p>
+                    <p className=' mt-2 font-bold text-gray-500 space-y-1'>Vestibulum porttitor egestas orci, vitae ullamcorper risus rutrum massa quis.</p>
                 </div>
             </div>
         </Main>
