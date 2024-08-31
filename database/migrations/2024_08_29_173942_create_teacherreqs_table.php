@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('teacherreqs', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('email', 191)->unique();
+            $table->string('email', 191)->nullable();
             $table->string('phone')->nullable();
-            $table->string('image')->nullable();
+            $table->string('photo')->nullable();
             $table->string('experience')->nullable();
             $table->string('title')->nullable();
             $table->string('category')->nullable();

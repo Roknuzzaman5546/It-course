@@ -19,7 +19,30 @@ const Techonitdb = ({ auth }) => {
 
     const submit = (e) => {
         e.preventDefault();
-        post(route('store.teacherReq'))
+        post(route('store.teacherReq')), {
+            preserveScroll: true,
+            onSuccess: () => {
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "Your data is post",
+                    showConfirmButton: false,
+                    timer: 2000
+                });
+            },
+            onError: (errors) => {
+                console.log(errors)
+                if (errors) {
+                    Swal.fire({
+                        title: 'Error!',
+                        text: errors.classes_name ? errors.classes_name : errors.email,
+                        icon: 'error',
+                        confirmButtonText: 'Cool'
+                    })
+                }
+            },
+        }
+
     }
 
     return (
