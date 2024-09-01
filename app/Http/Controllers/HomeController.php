@@ -27,4 +27,12 @@ class HomeController extends Controller
     {
         return Inertia::render('Terms&Condition/Condition');
     }
+    public function privecyIndex()
+    {
+        return Inertia::render('PrivecyPolicy/Privecy');
+    }
+    public function contactIndex()
+    {
+        return Inertia::render('Contact/ContactUs');
+    }
 }
