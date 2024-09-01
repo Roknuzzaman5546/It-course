@@ -6,6 +6,7 @@ import './Faq.css'
 import { FaHouseDamage, FaUserFriends } from 'react-icons/fa'
 import { GoLink } from 'react-icons/go'
 import { MdOutlineEmail } from 'react-icons/md'
+import { SlCallIn } from "react-icons/sl";
 
 const Faq = ({ auth }) => {
     return (
@@ -25,7 +26,7 @@ const Faq = ({ auth }) => {
             <h2 className=' text-3xl font-bold font-rancho text-center my-16'>Frequently asked questions</h2>
             <div className=' md:w-4/5 w-11/12 mx-auto flex md:flex-row flex-col items-center gap-10'>
                 {/* image */}
-                <div className=' md:w-1/2 w-full mx-auto'>
+                <div className=' md:w-1/2 w-full mx-auto cursor-pointer'>
                     <div className="faqimg-1 rounded-md overflow-hidden">
                         <div className="h-[600px] bg-transparent hover:bg-[#2b2b2bb2] transition-colors duration-500 ease-in-out">
                         </div>
@@ -57,36 +58,96 @@ const Faq = ({ auth }) => {
                 </div>
             </div>
 
-            <div className=' bg-[#f4f3ee]  my-10'>
-                <div className=' md:w-11/12 mx-auto w-full flex md:flex-row flex-col justify-center items-center'>
-                    <div className=' flex flex-col justify-center items-center gap-2 md:w-[20%] w-full py-10'>
-                        <h4 className=' text-2xl font-extrabold text-[#3730A3] font-rancho'>10+</h4>
+            {/* cotact and live chart part */}
+            <div className=' bg-[#f4f3ee]  my-16'>
+                <div className=' md:w-11/12 mx-auto w-full flex md:flex-row flex-col justify-around items-center'>
+                    <div className=' flex flex-col justify-center items-center gap-2 md:w-[30%] w-full py-12'>
                         <div className=' bg-white h-20 w-20 rounded-full flex flex-col items-center justify-center'>
-                            <MdOutlineEmail className=' text-4xl' />
+                            <SlCallIn className=' text-4xl' />
                         </div>
-                        <p className=' text-gray-500'>years</p>
+                        <p className=' text-black font-rancho text-2xl font-bold mt-3'>Help desk support</p>
+                        <p className=' text-gray-500 font-bold mt-3 text-center'>Lorem ipsum is simply dummy text of the simply dummy typesetting industry ipsum.</p>
                     </div>
-                    <div className=' flex flex-col justify-center items-center gap-2 md:w-[20%] w-full py-10 md:border-l-2 border-l-0 md:border-t-0 border-t-2'>
-                        <h4 className=' text-2xl font-extrabold text-[#3730A3] font-rancho'>100+</h4>
+                    <div className=' flex flex-col justify-center items-center gap-2 md:w-[30%] w-[90%] py-12 md:border-t-0 border-t-2'>
                         <div className=' bg-white h-20 w-20 rounded-full flex flex-col items-center justify-center'>
                             <FaUserFriends className=' text-3xl' />
                         </div>
-                        <p className=' text-gray-500'>Clints</p>
+                        <p className=' text-black font-rancho text-2xl font-bold mt-3'>Live chat support</p>
+                        <p className=' text-gray-500 font-bold mt-3 text-center'>Lorem ipsum is simply dummy text of the simply dummy typesetting industry ipsum.</p>
                     </div>
-                    <div className=' flex flex-col justify-center items-center gap-2 md:w-[20%] w-full py-10 md:border-l-2 border-l-0 md:border-t-0 border-t-2'>
-                        <h4 className=' text-2xl font-extrabold text-[#3730A3] font-rancho'>50+</h4>
-                        <div className=' bg-white h-20 w-20 rounded-full flex flex-col items-center justify-center'>
-                            <FaHouseDamage className=' text-3xl' />
+                </div>
+            </div>
+
+            {/* Return policy task */}
+            <h2 className=' text-center text-3xl font-rancho mt-10 mb-16 font-bold text-black'>Return policy</h2>
+            <div className='md:w-4/5 w-11/12 mx-auto mb-40'>
+                <div className="flex flex-col divide-y space-y-8 divide-gray-400">
+                    <details>
+                        <summary className="py-2 outline-none cursor-pointer font-rancho text-2xl font-bold">Optio maiores eligendi molestiae totam dolores similique?</summary>
+                        <div className="px-4 pb-4">
+                            <p className=' font-semibold text-gray-500 space-y-2 flex items-center gap-1'>
+                                <p className=' bg-gray-500 h-2 w-2 '></p>
+                                It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                            <p className=' font-semibold text-gray-500 space-y-2 flex items-center gap-1'>
+                                <p className=' bg-gray-500 h-2 w-2 '></p>
+                                It has survived not only five centuries, but also the leap into electronic typesetting</p>
                         </div>
-                        <p className=' text-gray-500'>Shops</p>
-                    </div>
-                    <div className=' flex flex-col justify-center items-center gap-2 md:w-[20%] w-full py-10 md:border-l-2 border-l-0 md:border-t-0 border-t-2'>
-                        <h4 className=' text-2xl font-extrabold text-[#3730A3] font-rancho'>20M+</h4>
-                        <div className=' bg-white h-20 w-20 rounded-full flex flex-col items-center justify-center'>
-                            <GoLink className=' text-3xl' />
+                    </details>
+                    <details>
+                        <summary className="py-2 outline-none cursor-pointer font-rancho text-2xl font-bold">Modi dolorem veritatis culpa quos consequuntur beatae itaque excepturi perspiciatis?</summary>
+                        <div className="px-4 pb-4">
+                            <p className=' font-semibold text-gray-500 space-y-2 flex items-center gap-1'>
+                                <p className=' bg-gray-500 h-2 w-2 '></p>
+                                It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                            <p className=' font-semibold text-gray-500 space-y-2 flex items-center gap-1'>
+                                <p className=' bg-gray-500 h-2 w-2 '></p>
+                                It has survived not only five centuries, but also the leap into electronic typesetting</p>
                         </div>
-                        <p className=' text-gray-500'>Shops</p>
-                    </div>
+                    </details>
+                    <details>
+                        <summary className="py-2 outline-none cursor-pointer font-rancho text-2xl font-bold">Magni reprehenderit possimus debitis?</summary>
+                        <div className="px-4 pb-4">
+                            <p className=' font-semibold text-gray-500 space-y-2 flex items-center gap-1'>
+                                <p className=' bg-gray-500 h-2 w-2 '></p>
+                                It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                            <p className=' font-semibold text-gray-500 space-y-2 flex items-center gap-1'>
+                                <p className=' bg-gray-500 h-2 w-2 '></p>
+                                It has survived not only five centuries, but also the leap into electronic typesetting</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary className="py-2 outline-none cursor-pointer font-rancho text-2xl font-bold">Optio maiores eligendi molestiae totam dolores similique?</summary>
+                        <div className="px-4 pb-4">
+                            <p className=' font-semibold text-gray-500 space-y-2 flex items-center gap-1'>
+                                <p className=' bg-gray-500 h-2 w-2 '></p>
+                                It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                            <p className=' font-semibold text-gray-500 space-y-2 flex items-center gap-1'>
+                                <p className=' bg-gray-500 h-2 w-2 '></p>
+                                It has survived not only five centuries, but also the leap into electronic typesetting</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary className="py-2 outline-none cursor-pointer font-rancho text-2xl font-bold">Modi dolorem veritatis culpa quos consequuntur beatae itaque excepturi perspiciatis?</summary>
+                        <div className="px-4 pb-4">
+                            <p className=' font-semibold text-gray-500 space-y-2 flex items-center gap-1'>
+                                <p className=' bg-gray-500 h-2 w-2 '></p>
+                                It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                            <p className=' font-semibold text-gray-500 space-y-2 flex items-center gap-1'>
+                                <p className=' bg-gray-500 h-2 w-2 '></p>
+                                It has survived not only five centuries, but also the leap into electronic typesetting</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary className="py-2 outline-none cursor-pointer font-rancho text-2xl font-bold">Magni reprehenderit possimus debitis?</summary>
+                        <div className="px-4 pb-4">
+                            <p className=' font-semibold text-gray-500 space-y-2 flex items-center gap-1'>
+                                <p className=' bg-gray-500 h-2 w-2 '></p>
+                                It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                            <p className=' font-semibold text-gray-500 space-y-2 flex items-center gap-1'>
+                                <p className=' bg-gray-500 h-2 w-2 '></p>
+                                It has survived not only five centuries, but also the leap into electronic typesetting</p>
+                        </div>
+                    </details>
                 </div>
             </div>
         </Main >
