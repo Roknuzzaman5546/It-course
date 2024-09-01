@@ -17,8 +17,8 @@ const AboutUs = ({ auth }) => {
                 <div className=" bg-[#000000B2]">
                     <div className=" w-full mx-auto py-8 text-left">
                         <div className="mt-2 ml-5">
-                            <NavLink to='/' className='navAfter relative font-medium text-base text-white mx-2'>Home /</NavLink>
-                            <NavLink to="/hotel" className="">About us</NavLink>
+                            <NavLink href={route('/')} active={route().current('/')} className='navAfter relative font-medium text-base text-white mx-2'>Home /</NavLink>
+                            <NavLink href={route('about.us')} active={route().current('about.us')} className="">About us</NavLink>
                         </div>
                     </div>
                 </div>
@@ -88,7 +88,7 @@ const AboutUs = ({ auth }) => {
             <h2 className=' text-3xl font-bold font-rancho text-center my-16'>Our team</h2>
             <div className=' md:w-4/5 w-[95%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16'>
                 <div>
-                    <div className="aboutteamimg-1 rounded-md overflow-hidden">
+                    <div className="aboutteamimg-1 cursor-pointer rounded-md overflow-hidden">
                         <div className="h-80 bg-transparent hover:bg-[#2b2b2bb2] transition-colors duration-500 ease-in-out">
                         </div>
                     </div>
@@ -98,7 +98,7 @@ const AboutUs = ({ auth }) => {
                     <p className=' mt-2 font-bold text-gray-500 space-y-1'>Vestibulum porttitor egestas orci, vitae ullamcorper risus rutrum massa quis.</p>
                 </div>
                 <div>
-                    <div className="aboutteamimg-2 rounded-md overflow-hidden">
+                    <div className="aboutteamimg-2 cursor-pointer rounded-md overflow-hidden">
                         <div className="h-80 bg-transparent hover:bg-[#2b2b2bb2] transition-colors duration-500 ease-in-out">
                         </div>
                     </div>
@@ -108,7 +108,7 @@ const AboutUs = ({ auth }) => {
                     <p className=' mt-2 font-bold text-gray-500 space-y-1'>Vestibulum porttitor egestas orci, vitae ullamcorper risus rutrum massa quis.</p>
                 </div>
                 <div>
-                    <div className="aboutteamimg-3 rounded-md overflow-hidden">
+                    <div className="aboutteamimg-3 cursor-pointer rounded-md overflow-hidden">
                         <div className="h-80 bg-transparent hover:bg-[#2b2b2bb2] transition-colors duration-500 ease-in-out">
                         </div>
                     </div>
@@ -118,7 +118,7 @@ const AboutUs = ({ auth }) => {
                     <p className=' mt-2 font-bold text-gray-500 space-y-1'>Vestibulum porttitor egestas orci, vitae ullamcorper risus rutrum massa quis.</p>
                 </div>
                 <div>
-                    <div className="aboutteamimg-4 rounded-md overflow-hidden">
+                    <div className="aboutteamimg-4 cursor-pointer rounded-md overflow-hidden">
                         <div className="h-80 bg-transparent hover:bg-[#2b2b2bb2] transition-colors duration-500 ease-in-out">
                         </div>
                     </div>

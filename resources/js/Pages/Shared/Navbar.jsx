@@ -32,8 +32,8 @@ const Navbar = ({ auth }) => {
     const otherDropDownLinks = (
         <>
             <li><NavLink href={route('faq')} active={route().current('faq')} className=" relative font-bold text-white mx-2">Faq</NavLink></li>
-            <li><NavLink className=" relative font-bold text-white mx-2">Privecy Policy</NavLink></li>
-            <li><NavLink className=" relative font-bold text-white mx-2">Terms & Condition</NavLink></li>
+            <li><NavLink  className=" relative font-bold text-white mx-2">Privecy Policy</NavLink></li>
+            <li><NavLink href={route('terms.condition')} active={route().current('terms.condition')} className=" relative font-bold text-white mx-2">Terms & Condition</NavLink></li>
             <li><NavLink className=" relative font-bold text-white mx-2">Contact us</NavLink></li>
         </>
     )

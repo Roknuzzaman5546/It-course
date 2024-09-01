@@ -23,4 +23,8 @@ class HomeController extends Controller
     {
         return Inertia::render('Faq/Faq');
     }
+    public function conditionIndex()
+    {
+        return Inertia::render('Terms&Condition/Condition');
+    }
 }

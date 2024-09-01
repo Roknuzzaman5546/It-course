@@ -24,6 +24,7 @@ Route::get('/', function () {
 })->name('/');
 Route::get('/allClasses', [HomeController::class, 'allclassIndex'])->name('all.class');
 Route::get('/faq', [HomeController::class, 'faqIndex'])->name('faq');
+Route::get('/condition', [HomeController::class, 'conditionIndex'])->name('terms.condition');
 
 
 Route::middleware('auth')->group(function () {

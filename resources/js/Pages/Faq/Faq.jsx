@@ -17,8 +17,8 @@ const Faq = ({ auth }) => {
                 <div className=" bg-[#000000B2]">
                     <div className=" w-full mx-auto py-8 text-left">
                         <div className="mt-2 ml-5">
-                            <NavLink to='/' className='navAfter relative font-medium text-base text-white mx-2'>Home /</NavLink>
-                            <NavLink to="/hotel" className="">FAQ</NavLink>
+                            <NavLink href={route('/')} active={route().current('/')} className='navAfter relative font-medium text-base text-white mx-2'>Home /</NavLink>
+                            <NavLink href={route('faq')} active={route().current('faq')} className="">FAQ</NavLink>
                         </div>
                     </div>
                 </div>
