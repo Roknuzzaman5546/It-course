@@ -25,8 +25,8 @@ const Condition = ({ auth }) => {
             <h2 className=' text-4xl font-bold font-rancho text-center my-20'>Terms & conditions</h2>
             {/* terms heading part */}
             <div className=' md:w-5/6 w-11/12 mx-auto flex md:flex-row flex-col justify-around items-center gap-10'>
-                <img className=' w-1/2 h-[500px] rounded-md mr-10' src={'assets/condition/condition.jpg'} alt="" />
-                <div className=' w-1/2'>
+                <img className=' md:w-1/2 w-full h-[500px] rounded-md mr-10' src={'assets/condition/condition.jpg'} alt="" />
+                <div className=' md:w-1/2 w-full'>
                     <h2 className=' text-2xl font-bold text-black font-rancho border-b mb-8 pb-5'>Restriction</h2>
                     <div className=' flex items-start gap-2'>
                         <p className=' bg-gray-600 p-1'></p>
@@ -113,8 +113,9 @@ const Condition = ({ auth }) => {
                     </div>
                 </div>
             </div>
+            <h2 className=' text-center my-20 text-4xl font-bold font-rancho'>Need Help</h2>
             {/* Need help section */}
-            <div className=' md:w-4/5 w-11/12 mx-auto flex md:flex-row flex-col gap-8 mb-10'>
+            <div className=' md:w-4/5 w-11/12 mx-auto flex md:flex-row flex-col gap-8 mb-32'>
                 <div className=' flex flex-col items-center justify-center shadow-2xl rounded-lg'>
                     <img className='rounded-t-lg' src={'assets/Condition/mail.jpg'} alt="" />
                     <div className=' flex flex-col items-center justify-center gap-2 py-8'>
@@ -123,7 +124,7 @@ const Condition = ({ auth }) => {
                         <p className=' text-gray-500'>Send us an email</p>
                     </div>
                 </div>
-                <div className=' flex md:flex-col flex-col-reverse items-center justify-center rounded-lg shadow-2xl'>
+                <div className=' flex md:flex-col flex-col-reverse items-center justify-center rounded-lg shadow-top-md '>
                     <div className=' flex flex-col items-center justify-center gap-2 py-8'>
                         <div className='bg-white h-20 w-20 rounded-full flex flex-col items-center justify-center shadow-2xl'><IoCallOutline className=' text-3xl' /></div>
                         <h3 className=' text-xl font-bold font-rancho text-black mt-2'>Speak with us</h3>
