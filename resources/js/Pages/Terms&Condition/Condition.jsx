@@ -20,8 +20,99 @@ const Condition = ({ auth }) => {
                 </div>
             </div>
             <h2 className=' text-4xl font-bold font-rancho text-center my-20'>Terms & conditions</h2>
-            <div className=' max-w-2xl'>
-                <img src={'assets/condition/condition.jpg'} alt="" />
+            {/* terms heading part */}
+            <div className=' md:w-5/6 w-11/12 mx-auto flex md:flex-row flex-col justify-around items-center gap-10'>
+                <img className=' w-1/2 h-[500px] rounded-md mr-10' src={'assets/condition/condition.jpg'} alt="" />
+                <div className=' w-1/2'>
+                    <h2 className=' text-2xl font-bold text-black font-rancho border-b mb-8 pb-5'>Restriction</h2>
+                    <div className=' flex items-start gap-2'>
+                        <p className=' bg-gray-600 p-1'></p>
+                        <p className=' text-gray-500 tex-2xl space-y-2'>
+                            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+                        </p>
+                    </div>
+                    <div className=' flex items-start gap-2 my-5'>
+                        <p className=' bg-gray-600 p-1'></p>
+                        <p className=' text-gray-500 tex-2xl space-y-2 '>
+                            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+                        </p>
+                    </div>
+                    <div className=' flex items-start gap-2'>
+                        <p className=' bg-gray-600 p-1'></p>
+                        <p className=' text-gray-500 tex-2xl space-y-2'>
+                            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {/*  Terms & condition  moddle part */}
+            <div className=' bg-[#f4f3ee]  my-16'>
+                <div className=' md:w-5/6 mx-auto w-full flex md:flex-row flex-col justify-around items-center gap-10'>
+                    <div className=' py-16 md:w-full w-11/12'>
+                        <div>
+                            <h2 className=' text-xl font-bold text-black'>Introduction words</h2>
+                            <div className=' flex items-center gap-3 mt-5'>
+                                <p className=' bg-gray-500 h-2 w-2'></p>
+                                <p>There are many variations of passages of Lorem Ipsum available, by injected, or words which don't look even slightly believable.</p>
+                            </div>
+                        </div>
+                        <div className=' border-t border-gray-400 mt-8 pt-8'>
+                            <h2 className=' text-xl font-bold text-black'>Your content</h2>
+                            <div className=' flex items-center gap-3 mt-5'>
+                                <p className=' bg-gray-500 h-2 w-2'></p>
+                                <p>There are many variations of passages of Lorem Ipsum available, by injected, or words which don't look even slightly believable.</p>
+                            </div>
+                        </div>
+                        <div className=' border-t border-gray-400 mt-8 pt-8'>
+                            <h2 className=' text-xl font-bold text-black'>No majority</h2>
+                            <div className=' flex items-center gap-3 mt-5'>
+                                <p className=' bg-gray-500 h-2 w-2'></p>
+                                <p>All the Lorem Ipsum generators on the Internet tend to repeat as necessary, making this the first true generator on the Internet.</p>
+                            </div>
+                        </div>
+                        <div className=' border-t border-gray-400 mt-8 pt-8'>
+                            <h2 className=' text-xl font-bold text-black'>Introduction words</h2>
+                            <div className=' flex items-center gap-3 mt-5'>
+                                <p className=' bg-gray-500 h-2 w-2'></p>
+                                <p>All the Lorem Ipsum generators on the Internet tend to repeat as necessary, making this the first true generator on the Internet.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className=' py-16 md:w-full w-11/12'>
+                        <div>
+                            <h2 className=' text-xl font-bold text-black'>Maxim placate</h2>
+                            <div className=' flex items-center gap-3 mt-5'>
+                                <p className=' bg-gray-500 h-2 w-2'></p>
+                                <p>There are many variations of passages of Lorem Ipsum available, by injected, or words which don't look even slightly believable.</p>
+                            </div>
+                        </div>
+                        <div className=' border-t border-gray-400 mt-8 pt-8'>
+                            <h2 className=' text-xl font-bold text-black'>Variation terms</h2>
+                            <div className=' flex items-center gap-3 mt-5'>
+                                <p className=' bg-gray-500 h-2 w-2'></p>
+                                <p>There are many variations of passages of Lorem Ipsum available, by injected, or words which don't look even slightly believable.</p>
+                            </div>
+                        </div>
+                        <div className=' border-t border-gray-400 mt-8 pt-8'>
+                            <h2 className=' text-xl font-bold text-black'>Sever ability</h2>
+                            <div className=' flex items-center gap-3 mt-5'>
+                                <p className=' bg-gray-500 h-2 w-2'></p>
+                                <p>All the Lorem Ipsum generators on the Internet tend to repeat as necessary, making this the first true generator on the Internet.</p>
+                            </div>
+                        </div>
+                        <div className=' border-t border-gray-400 mt-8 pt-8'>
+                            <h2 className=' text-xl font-bold text-black'>Maxim placate</h2>
+                            <div className=' flex items-center gap-3 mt-5'>
+                                <p className=' bg-gray-500 h-2 w-2'></p>
+                                <p>All the Lorem Ipsum generators on the Internet tend to repeat as necessary, making this the first true generator on the Internet.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {/* Need help section */}
+            <div>
+
             </div>
         </Main>
     )

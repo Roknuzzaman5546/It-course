@@ -27,6 +27,6 @@ class TeachersController extends Controller
         ]);
         // dd($teacherData);
         DB::table('teacherreqs')->insert($teacherData);
-        return redirect('/')->with('success', 'Student updated successfully.');
+        return redirect('/')->with('success', 'Teacher request post successfully.');
     }
 }
