@@ -3,6 +3,9 @@ import { Head } from '@inertiajs/react'
 import React from 'react'
 import './Condition.css'
 import NavLink from '@/Components/NavLink'
+import { TfiEmail } from "react-icons/tfi";
+import { IoCallOutline } from "react-icons/io5";
+import { MdOutlineAddLocationAlt } from 'react-icons/md'
 
 const Condition = ({ auth }) => {
     return (
@@ -111,8 +114,31 @@ const Condition = ({ auth }) => {
                 </div>
             </div>
             {/* Need help section */}
-            <div>
-
+            <div className=' md:w-4/5 w-11/12 mx-auto flex md:flex-row flex-col gap-8 mb-10'>
+                <div className=' flex flex-col items-center justify-center shadow-2xl rounded-lg'>
+                    <img className='rounded-t-lg' src={'assets/Condition/mail.jpg'} alt="" />
+                    <div className=' flex flex-col items-center justify-center gap-2 py-8'>
+                        <div className='bg-white h-20 w-20 rounded-full flex flex-col items-center justify-center shadow-2xl'><TfiEmail className=' text-3xl' /></div>
+                        <h3 className=' text-xl font-bold font-rancho text-black mt-2'>Chat with us</h3>
+                        <p className=' text-gray-500'>Send us an email</p>
+                    </div>
+                </div>
+                <div className=' flex md:flex-col flex-col-reverse items-center justify-center rounded-lg shadow-2xl'>
+                    <div className=' flex flex-col items-center justify-center gap-2 py-8'>
+                        <div className='bg-white h-20 w-20 rounded-full flex flex-col items-center justify-center shadow-2xl'><IoCallOutline className=' text-3xl' /></div>
+                        <h3 className=' text-xl font-bold font-rancho text-black mt-2'>Speak with us</h3>
+                        <p className=' text-gray-500'>Give us a call toady</p>
+                    </div>
+                    <img className=' rounded-b-lg' src={'assets/Condition/call.jpg'} alt="" />
+                </div>
+                <div className=' flex flex-col items-center justify-center shadow-2xl rounded-lg'>
+                    <img className=' rounded-t-lg' src={'assets/Condition/location.jpg'} alt="" />
+                    <div className=' flex flex-col items-center justify-center gap-2 py-8'>
+                        <div className='bg-white h-20 w-20 rounded-full flex flex-col items-center justify-center shadow-2xl'><MdOutlineAddLocationAlt className=' text-3xl' /></div>
+                        <h3 className=' text-xl font-bold font-rancho text-black mt-2'>Locate a store</h3>
+                        <p className=' text-gray-500'>Describe your project</p>
+                    </div>
+                </div>
             </div>
         </Main>
     )
