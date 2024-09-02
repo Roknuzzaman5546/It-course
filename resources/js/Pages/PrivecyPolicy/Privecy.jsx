@@ -13,6 +13,7 @@ const Privecy = ({ auth }) => {
                 <div className=" bg-[#000000B2]">
                     <div className=" w-full mx-auto py-8 text-left">
                         <div className="mt-2 ml-5">
+                            
                             <NavLink href={route('/')} active={route().current('/')} className='navAfter relative font-medium text-base text-white mx-2'>Home /</NavLink>
                             <NavLink href={route('privecy.policy')} active={route().current('privecy.policy')} className="">Privecy policy</NavLink>
                         </div>
@@ -21,7 +22,6 @@ const Privecy = ({ auth }) => {
             </div>
 
             <div>Privecy</div>
-            <h2>This is me and you</h2>
         </Main>
     )
 }
