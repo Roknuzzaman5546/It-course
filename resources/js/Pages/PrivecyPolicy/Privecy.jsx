@@ -20,7 +20,7 @@ const Privecy = ({ auth }) => {
                 </div>
             </div>
 
-            <div>Privecy</div>
+            <div> this is privecy page Privecy</div>
         </Main>
     )
 }
