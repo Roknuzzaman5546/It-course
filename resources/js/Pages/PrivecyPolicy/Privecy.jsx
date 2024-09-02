@@ -21,6 +21,7 @@ const Privecy = ({ auth }) => {
             </div>
 
             <div>Privecy</div>
+            <h2>This is me and you</h2>
         </Main>
     )
 }

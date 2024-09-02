@@ -53,6 +53,7 @@ const ContactUs = () => {
                 </div>
             </div>
             {/* Contact form page */}
+
             <h2 className=' text-4xl font-bold font-rancho text-center my-20'>Drop us message</h2>
             <div className=' md:w-1/2 w-11/12 mx-auto mb-20'>
                 <form>
