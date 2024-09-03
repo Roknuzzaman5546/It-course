@@ -21,7 +21,17 @@ const Privecy = ({ auth }) => {
                 </div>
             </div>
 
-            <div>Privecy</div>
+            <h2 className=' text-4xl font-bold font-rancho text-center my-20'>Privacy policy</h2>
+
+            {/* privecy policy */}
+            <div>
+                <div>
+                    
+                </div>
+                <div>
+                    <img src={'/assets/privecy-policy/privecy-policy.JPG'} alt="" />
+                </div>
+            </div>
         </Main>
     )
 }
