@@ -77,7 +77,7 @@ const ContactUs = () => {
                         <p className=' font-bold text-black'>Message</p>
                         <input class="focus:outline-0 focus:ring-0 pb-32 focus:border-gray-300 border-2 border-gray-300 rounded-lg w-full mt-2" type="text" name="" id="" placeholder="message" />
                     </div>
-                    <input className=' mt-2 bg-blue-800 py-3 px-5 text-white font-bold cursor-pointer btn hover:bg-blue-800' type="submit" value="Send" />
+                    <input className=' mt-2 bg-gray-800 py-3 px-5 text-white font-bold cursor-pointer btn hover:bg-gray-800' type="submit" value="Send" />
                 </form>
             </div>
         </Main >
