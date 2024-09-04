@@ -6,9 +6,11 @@ import Navbar from "@/Pages/Shared/Navbar";
 
 const Main = ({ children, auth }) => {
     return (
-        <div className=" w-screen">
+        <div>
             <Navbar auth={auth}></Navbar>
-            {children}
+            <div>
+                {children}
+            </div>
             <Footer></Footer>
         </div>
     );
