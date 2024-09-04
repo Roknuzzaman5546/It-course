@@ -2,6 +2,7 @@ import NavLink from '@/Components/NavLink'
 import Main from '@/Layouts/Main'
 import { Head } from '@inertiajs/react'
 import React from 'react'
+import { RiSecurePaymentFill } from "react-icons/ri";
 import './Privecy.css'
 
 const Privecy = ({ auth }) => {
@@ -56,14 +57,21 @@ const Privecy = ({ auth }) => {
                     </div>
                 </div>
                 {/* privecy middle section */}
-                <div className=' bg-[#f4f3ee]  my-16'>
+            </div>
+            <div className=' bg-[#f4f3ee]  my-16'>
+                <div className='lg:max-w-[1600px] md:max-w-[1400px] max-w-[700px] mx-auto'>
                     <div className=' md:w-5/6 mx-auto w-full flex md:flex-row flex-col justify-around items-center gap-10'>
-                        <div className=' py-16 md:w-full w-11/12'>
-                            <div>
-                                
+                        <div className=' py-16 w-11/12 mx-auto'>
+                            <div className=' flex items-center gap-3 rounded-lg bg-white py-5 pl-5'>
+                                <RiSecurePaymentFill className=' text-3xl' />
+                                <p className=' text-xl font-bold font-rancho'>Secure payment</p>
+                            </div>
+                            <div className=' flex items-center gap-3 rounded-lg py-5 pl-5'>
+                                <RiSecurePaymentFill className=' text-3xl' />
+                                <p className=' text-xl font-bold font-rancho'>Secure payment</p>
                             </div>
                         </div>
-                        <div className=' py-16 md:w-full w-11/12'>
+                        <div className=' py-16 w-11/12 mx-auto'>
 
                         </div>
                     </div>
