@@ -145,8 +145,8 @@ const Register = () => {
                                 />
                                 <InputError message={errors.password_confirmation} className="mt-2" />
                             </div>
-                            <h2 className=" text-white">If You have in an account go to <Link href={route('login')}><span className=' text-blue-500 font-bold text-xl'>Log in</span></Link></h2>
-                            <div className="flex items-center justify-end mt-4">
+                            <h2 className=" text-white ml-1">If You have in an account go to <Link href={route('login')}><span className=' text-blue-500 font-bold text-xl'>Log in</span></Link></h2>
+                            <div className="flex items-center justify-start mt-2">
                                 <PrimaryButton className="ms-4 box butt" disabled={processing}>
                                     Register
                                 </PrimaryButton>

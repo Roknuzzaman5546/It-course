@@ -73,36 +73,36 @@ const Login = ({ status, canResetPassword }) => {
 
                                 <InputError message={errors.password} className="mt-2" />
                             </div>
-                            <div className="block mt-4">
-                                <label className="flex items-center">
-                                    <Checkbox
-                                        name="remember"
-                                        checked={data.remember}
-                                        onChange={(e) => setData('remember', e.target.checked)}
-                                    />
-                                    <span className="ms-2 text-sm text-gray-600">Remember me</span>
-                                </label>
+                            <div className=' flex justify-between items-center mb-2'>
+                                <div className="block mt-2">
+                                    <label className="flex items-center">
+                                        <Checkbox
+                                            name="remember"
+                                            checked={data.remember}
+                                            onChange={(e) => setData('remember', e.target.checked)}
+                                        />
+                                        <span className="ms-2 text-sm text-gray-600">Remember me</span>
+                                    </label>
+                                </div>
+                                <div className="flex items-center justify-end mt-2">
+                                    {canResetPassword && (
+                                        <Link
+                                            href={route('password.request')}
+                                            className="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                                        >
+                                            Forgot your password?
+                                        </Link>
+                                    )}
+                                </div>
                             </div>
-
-                            <div className="flex items-center justify-end mt-4">
-                                {canResetPassword && (
-                                    <Link
-                                        href={route('password.request')}
-                                        className="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                                    >
-                                        Forgot your password?
-                                    </Link>
-                                )}
-
-                                <PrimaryButton className="ms-4 box butt" disabled={processing}>
-                                    Log in
-                                </PrimaryButton>
-                            </div>
+                            <PrimaryButton className=" box butt flex justify-center items-center w-full" disabled={processing}>
+                                Log in
+                            </PrimaryButton>
                         </form>
-                        <div>
-                            <button className='btn w-9/12 font-bold'><img className=' w-5 h-5' src={'/assets/google.png'} alt="" /> <p>Google</p></button>
+                        <div className=" flex justify-center items-center">
+                            <button className='btn w-4/5 font-bold'><img className=' w-5 h-5' src={'/assets/google.png'} alt="" /> <p>Google</p></button>
                         </div>
-                        <h2 className=' text-white'>If you new in our resturent go to <Link href={route('register')}><span className=' text-blue-700 font-bold text-xl'>Register</span></Link></h2>
+                        <h2 className=' text-white ml-9 my-3 pb-5'>If you new in our resturent go to <Link href={route('register')}><span className=' text-blue-700 font-bold text-xl'>Register</span></Link></h2>
                     </div>
                 </div>
             </div>
