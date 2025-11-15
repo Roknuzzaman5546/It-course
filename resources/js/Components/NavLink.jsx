@@ -1,6 +1,7 @@
 import { Link } from '@inertiajs/react';
 
 export default function NavLink({ active = false, className = '', children, ...props }) {
+    console.log(active);
     return (
         <Link
             {...props}

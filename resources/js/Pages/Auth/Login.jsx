@@ -5,6 +5,7 @@ import TextInput from '@/Components/TextInput';
 import InputError from '@/Components/InputError';
 import PrimaryButton from '@/Components/PrimaryButton';
 import { useEffect } from 'react';
+import Navbar from '../Shared/Navbar';
 
 
 const Login = ({ status, canResetPassword }) => {
@@ -28,6 +29,7 @@ const Login = ({ status, canResetPassword }) => {
     return (
         <div className='loginbg bg-fixed'>
             <Head title='Login' />
+            <Navbar />
             {status && <div className="mb-4 font-medium text-sm text-green-600">{status}</div>}
             <div className="hero min-h-screen py-10 backdrop-blur-sm">
                 <div className="hero-content flex-col lg:flex-row gap-3">

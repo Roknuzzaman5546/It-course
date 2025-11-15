@@ -8,7 +8,7 @@
         return (
             <div>
                 <div className="card bg-gray-800 shadow-xl text-white cardC ">
-                    <div>
+                    <div className=" relative">
                         <img className="h-44 relative w-full" src={img} alt="Shoes" />
                         <div className="absolute bottom-0 top-0 left-0 ml-2 mt-2">
                             <p className="bg-gray-700 text-white p-1 rounded-md text-xs">$ {price}</p>

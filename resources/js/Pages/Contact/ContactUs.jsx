@@ -24,7 +24,7 @@ const ContactUs = () => {
             </div>
             <h2 className=' text-4xl font-bold font-rancho text-center my-20'>Get in touch</h2>
             {/* get in touch card part */}
-            <div className=' md:w-4/5 w-11/12 mx-auto flex md:flex-row flex-col mb-10 gap-8'>
+            <div className=' md:max-w-screen-2xl w-11/12 mx-auto flex md:flex-row flex-col mb-10 gap-8'>
                 <div className=' flex flex-col justify-center items-center gap-5 shadow-custom py-10 px-6 text-center rounded-lg'>
                     <div className='bg-gray-800 cursor-pointer text-white h-20 w-20 rounded-full flex items-center justify-center transition-transform duration-300 hover:bg-white hover:text-black hover:-translate-y-1 shadow-2xl hover:shadow-custom'>
                         <TfiEmail className='text-4xl' />
