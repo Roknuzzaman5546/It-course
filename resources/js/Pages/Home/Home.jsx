@@ -16,9 +16,9 @@ const Home = ({auth}) => {
                 <Banner></Banner>
                 <div className="w-11/12 mx-auto overflow-hidden">
                     <Partnership></Partnership>
+                    <ItShow></ItShow>
                     <Classcours></Classcours>
                     <Total></Total>
-                    <ItShow></ItShow>
                     <Teaching></Teaching>
                 </div>
             </div>

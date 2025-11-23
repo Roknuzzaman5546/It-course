@@ -12,8 +12,6 @@ const Allclasses = ({auth}) => {
             .then(data => setClasses(data))
     }, [])
 
-    // console.log('show data', classes, props.auth.user )
-
 
     return (
         <Main auth={auth}>
