@@ -5,45 +5,42 @@ import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 import { FreeMode, Pagination } from 'swiper/modules';
 import Title from '../Shared/Title';
+import Classes from '../AllClass/Classes';
+import { Link } from '@inertiajs/react';
 
-const Classcours = () => {
-    const [cours, setCours] = useState([]);
+const Classcourse = () => {
+    const [course, setCourse] = useState([]);
 
     useEffect(() => {
         fetch('/class.json')
             .then(res => res.json())
-            .then(data => setCours(data));
+            .then(data => setCourse(data));
     }, []);
 
     return (
         <div className="my-20">
             <Title
-                heading={"Classes & courses"}
+                heading={"Classes & coursees"}
                 Subheading={"This is our most popular class"}
             />
 
-            <Swiper
-                slidesPerView={3}
-                spaceBetween={30}
-                freeMode={true}
-                pagination={{ clickable: true }}
-                modules={[FreeMode, Pagination]}
-                className="mySwiper"
-            >
-                {cours.map((slid) => (
-                    <SwiperSlide key={slid.title}>
-                        <div className="bg-gray-800 rounded-lg pt-3 pb-2 flex flex-col gap-2 items-center text-white">
-                            <img className="w-60 h-60 object-cover rounded-md" src={slid.img} alt={slid.title} />
-                            <h2 className="text-xs text-white font-bold uppercase text-center">
-                                {slid.title}
-                            </h2>
-                            <h2 className="text-xs font-bold">{slid.price} $</h2>
-                        </div>
-                    </SwiperSlide>
-                ))}
-            </Swiper>
+            <div className=" grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 mt-10">
+                {
+                    course.slice(0, 12).map(item => <Classes
+                        key={item.id}
+                        item={item}
+                    ></Classes>)
+                }
+            </div>
+            <div className="flex justify-center mt-10">
+                <Link href={route("all.class")}>
+                    <button className="px-8 py-3 bg-blue-600 text-white font-semibold rounded shadow-md hover:bg-blue-700 transition-all">
+                        Explore All Classes
+                    </button>
+                </Link>
+            </div>
         </div>
     );
 };
 
-export default Classcours;
+export default Classcourse;

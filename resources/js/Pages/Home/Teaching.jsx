@@ -15,8 +15,8 @@ const Teaching = () => {
 
     return (
         <div className=' flex lg:flex-row flex-col items-center justify-between gap-5 my-20'>
-            <div data-aos="fade-left" className=' '>
-                <img className=' w-[1000px] rounded-md shadow-lg' src="/assets/home/teacher-diversity.jpg" alt="" />
+            <div data-aos="fade-left" className='w-full flex justify-center'>
+                <img className=' w-[750px] rounded-md shadow-lg' src="/assets/home/teacher-diversity.jpg" alt="" />
             </div>
             <div data-aos="fade-right" className=' text-center w-full space-y-2' >
                 <h2 className=' font-bold text-5xl font-rancho'>Teach our site</h2>
