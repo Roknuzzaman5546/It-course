@@ -9,8 +9,8 @@ const ItShow = () => {
     }, []);
 
     return (
-        <div className='w-11/12 mx-auto py-16'>
-            <div className="relative mt-12 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800 rounded-3xl overflow-hidden">
+        <div className=''>
+            <div className="relative bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800 overflow-hidden">
                 {/* Background Pattern */}
                 <div className="absolute inset-0 opacity-10">
                     <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl"></div>
