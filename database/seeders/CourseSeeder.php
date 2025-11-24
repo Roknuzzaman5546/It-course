@@ -1,0 +1,107 @@
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\DB;
+
+class CourseSeeder extends Seeder
+{
+    public function run(): void
+    {
+        $courses = [
+            [
+                "title" => "Learn Python Programming",
+                "name" => "Python Mastery Course",
+                "img" => "https://i.ibb.co.com/b8QWWJ2/hitesh-choudhary-D9-Zow2-REm8-U-unsplash.jpg",
+                "price" => 49.99,
+                "shortDescription" => "Comprehensive Python course for beginners to advanced.",
+                "totalEnrolment" => 1200
+            ],
+            [
+                "title" => "Web Development Bootcamp",
+                "name" => "Full Stack Webdevlopa",
+                "img" => "https://i.ibb.co.com/bMYj432T/james-harrison-vp-Oe-Xr5wm-R4-unsplash.jpg",
+                "price" => 79.99,
+                "shortDescription" => "Master the art of web development with this intensive bootcamp.",
+                "totalEnrolment" => 800
+            ],
+            [
+                "title" => "Data Science Fundamentals",
+                "name" => "Data Science Essentials",
+                "img" => "https://i.ibb.co.com/nqdpD7ZR/tim-mossholder-WE-Kv-ZB1l0-unsplash.jpg",
+                "price" => 59.99,
+                "shortDescription" => "A hands-on approach to learning key data science concepts and tools.",
+                "totalEnrolment" => 1500
+            ],
+            [
+                "title" => "Graphic Design Basics",
+                "name" => "Design Principles Workshop",
+                "img" => "https://i.ibb.co.com/67NbSYQ4/emily-bernal-v9v-II5g-V8-Lw-unsplash.jpg",
+                "price" => 39.99,
+                "shortDescription" => "Unlock your creativity with this graphic design workshop.",
+                "totalEnrolment" => 600
+            ],
+            [
+                "title" => "Learn JavaScript Basics",
+                "name" => "JavaScript Fundamentals",
+                "img" => "https://i.ibb.co.com/JWThJF6f/faizur-rehman-p-HPzd-EHN6-Os-unsplash.jpg",
+                "price" => 29.99,
+                "shortDescription" => "A beginner-friendly course to master JavaScript basics.",
+                "totalEnrolment" => 500
+            ],
+            [
+                "title" => "Introduction to Machine Learning",
+                "name" => "ML Essentials",
+                "img" => "https://i.ibb.co.com/99fWWxvg/aaron-burden-y02j-EX-B0-O0-unsplash.jpg",
+                "price" => 69.99,
+                "shortDescription" => "Explore the fundamentals of machine learning and its applications.",
+                "totalEnrolment" => 800
+            ],
+            [
+                "title" => "Digital Marketing Strategies",
+                "name" => "Marketing Mastery",
+                "img" => "https://i.ibb.co.com/cSrvkK7V/carlos-muza-hpj-Sk-U2-UYSU-unsplash.jpg",
+                "price" => 49.99,
+                "shortDescription" => "Learn effective digital marketing strategies to boost your business.",
+                "totalEnrolment" => 1200
+            ],
+            [
+                "title" => "Mobile App Development Workshop",
+                "name" => "App Dev Bootcamp",
+                "img" => "https://i.ibb.co/cgfm3Fz/mobile-apps-in-business-copy-5.jpg",
+                "price" => 59.99,
+                "shortDescription" => "Hands-on workshop to kickstart your mobile app development journey.",
+                "totalEnrolment" => 600
+            ],
+            [
+                "title" => "Creative Writing Masterclass",
+                "name" => "Write Your Story",
+                "img" => "https://i.ibb.co.com/QvVnDPcs/nick-morrison-FHnnjk1-Yj7-Y-unsplash.jpg",
+                "price" => 34.99,
+                "shortDescription" => "Unlock your creative potential with this comprehensive writing masterclass.",
+                "totalEnrolment" => 400
+            ],
+        ];
+
+        foreach ($courses as $index => $course) {
+            DB::table('courses')->insert([
+                "teacher_id" => 1, // তোমার user টেবিলের যেকোনো Teacher ID বসাও
+                "title" => $course["title"],
+                "slug" => Str::slug($course["title"]) . '-' . ($index + 1),
+                "description" => $course["shortDescription"],
+                "price" => $course["price"],
+                "currency" => "BDT",
+                "status" => "published",
+                "category_id" => null,
+                "thumbnail" => $course["img"],
+                "level" => "Beginner",
+                "duration" => "5h 30m",
+                "totalEnrolment" => $course["totalEnrolment"],
+                "created_at" => now(),
+                "updated_at" => now(),
+            ]);
+        }
+    }
+}

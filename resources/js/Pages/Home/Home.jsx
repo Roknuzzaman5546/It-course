@@ -8,14 +8,14 @@ import Main from '@/Layouts/Main';
 import { Head } from '@inertiajs/react';
 import ItShow from './ItShow';
 
-const Home = ({auth}) => {
+const Home = ({auth, classData}) => {
     return (
         <Main auth={auth}>
             <Head title="Home" />
             <div>
                 <Banner></Banner>
                 <div className="overflow-hidden">
-                    <Classcours></Classcours>
+                    <Classcours classData={classData}></Classcours>
                     <Partnership></Partnership>
                     <ItShow></ItShow>
                     <Total></Total>

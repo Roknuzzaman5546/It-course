@@ -23,6 +23,7 @@ return new class extends Migration {
             $table->string('thumbnail')->nullable();
             $table->string('level')->nullable(); // Beginner, Intermediate, Advanced
             $table->string('duration')->nullable(); // 5h 30m etc
+            $table->string('totalEnrolment')->nullable(); // 5h 30m etc
             $table->timestamps();
         });
     }

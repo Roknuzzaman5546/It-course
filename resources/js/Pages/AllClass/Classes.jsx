@@ -3,7 +3,7 @@ import { FaArrowRight } from "react-icons/fa6";
 import { Sparkles, BookOpen } from 'lucide-react';
 
 const Classes = ({ item }) => {
-    const { name, title, img, price, totalEnrolment } = item;
+    const { title, thumbnail, price, totalEnrolment } = item;
 
     return (
         <div
@@ -15,8 +15,8 @@ const Classes = ({ item }) => {
                 <div className="relative h-48 overflow-hidden bg-slate-950">
                     <img
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                        src={img}
-                        alt={name}
+                        src={thumbnail}
+                        alt={title}
                     />
                     {/* Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -40,7 +40,7 @@ const Classes = ({ item }) => {
                 <div className="p-5">
                     {/* Course Name */}
                     <h3 className="text-lg font-bold text-white line-clamp-2 mb-2 group-hover:text-blue-400 transition-colors">
-                        {name}
+                        {title}
                     </h3>
 
                     {/* Description */}

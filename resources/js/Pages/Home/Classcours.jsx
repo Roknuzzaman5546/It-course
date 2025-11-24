@@ -30,17 +30,7 @@ const Title = ({ heading, Subheading }) => (
 );
 
 
-const Classcourse = () => {
-    const [course, setCourse] = useState([]);
-
-    useEffect(() => {
-        AOS.init({ duration: 800, offset: 150 });
-        fetch('/class.json')
-            .then(res => res.json())
-            .then(data => setCourse(data))
-            .catch(error => console.error('Error loading courses:', error));
-    }, []);
-
+const Classcourse = ({classData}) => {
     return (
         <div className="py-20 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900">
             <div className="w-11/12 mx-auto">
@@ -51,7 +41,7 @@ const Classcourse = () => {
 
                 {/* Grid */}
                 <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6 mb-12">
-                    {course.slice(0, 12).map((item, index) => (
+                    {classData.slice(0, 12).map((item, index) => (
                         <div key={item.id} data-aos="fade-up" data-aos-delay={index * 50}>
                             <Classes item={item} />
                         </div>
