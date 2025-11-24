@@ -7,9 +7,9 @@ import { MdOutlineAddLocationAlt } from 'react-icons/md'
 import { IoCallOutline } from 'react-icons/io5'
 import { TfiEmail } from 'react-icons/tfi'
 
-const ContactUs = () => {
+const ContactUs = ({ auth }) => {
     return (
-        <Main>
+        <Main auth={auth}>
             <Head title='Contact' />
             {/* contact banner image */}
             <div className="contactbgimg">

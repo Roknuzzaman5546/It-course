@@ -29,14 +29,14 @@ const Banner = () => {
     }
 
     const prevSlider = () =>
-        setCurrentSlider(currentSlider === 0 ? course.length - 1 : currentSlider - 1);
+        setCurrentSlider(currentSlider === 0 ? course.slice(0, 4).length - 1 : currentSlider - 1);
 
     const nextSlider = () =>
-        setCurrentSlider(currentSlider === course.length - 1 ? 0 : currentSlider + 1);
+        setCurrentSlider(currentSlider === course.slice(0, 4).length - 1 ? 0 : currentSlider + 1);
 
     const bgImage =
         currentSlider === 0
-            ? course[course.length - 1].img
+            ? course[course.slice(0, 4).length - 1].img
             : course[currentSlider - 1].img;
 
     return (
@@ -99,7 +99,7 @@ const Banner = () => {
                     className="flex items-center gap-4 duration-300 ease-linear"
                     style={{ transform: `translateX(-${currentSlider * 200}px)` }}
                 >
-                    {course.map((slide, inx) => (
+                    {course.slice(0, 4).map((slide, inx) => (
                         <div
                             key={inx}
                             className={`relative h-[180px] min-w-[90px] sm:h-[200px] lg:h-[320px] lg:min-w-[184px] 

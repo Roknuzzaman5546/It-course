@@ -24,8 +24,8 @@ Route::get('/', function () {
 })->name('/');
 Route::get('/allClasses',[HomeController::class, 'allclassIndex'])->name('all.class');
 Route::get('/faq', [HomeController::class, 'faqIndex'])->name('faq');
-Route::get('/condition', [HomeController::class, 'conditionIndex'])->name('terms.condition');
-Route::get('/Privecy', [HomeController::class, 'privecyIndex'])->name('privecy.policy');
+Route::get('/terms', [HomeController::class, 'conditionIndex'])->name('terms.condition');
+Route::get('/privacy-policy', [HomeController::class, 'privecyIndex'])->name('privecy.policy');
 Route::get('/contact', [HomeController::class, 'contactIndex'])->name('contact.us');
 
 
