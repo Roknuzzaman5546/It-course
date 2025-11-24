@@ -41,7 +41,7 @@ const Banner = () => {
 
     return (
         <div
-            className="relative z-50 flex h-60 bg-center w-full transform flex-col items-center justify-center gap-5 overflow-hidden bg-contain duration-1000 ease-linear before:absolute before:inset-0 before:bg-black/50 sm:h-96 md:h-[600px] lg:gap-10 xl:flex-row"
+            className="relative flex h-60 bg-center w-full transform flex-col items-center justify-center gap-5 overflow-hidden bg-contain duration-1000 ease-linear before:absolute before:inset-0 before:bg-black/50 sm:h-96 md:h-[600px] lg:gap-10 xl:flex-row"
             style={{ backgroundImage: `url(${bgImage})` }}
         >
             {/* arrow */}

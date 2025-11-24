@@ -14,7 +14,7 @@ const Home = ({auth}) => {
             <Head title="Home" />
             <div>
                 <Banner></Banner>
-                <div className="w-11/12 mx-auto overflow-hidden">
+                <div className="overflow-hidden">
                     <Classcours></Classcours>
                     <Partnership></Partnership>
                     <ItShow></ItShow>
