@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Class\ClassController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
@@ -40,6 +41,9 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/techIt', [HomeController::class, 'techIndex'])->name('tech.it');
     Route::post('/techIt', [TeachersController::class, 'storeTeacherReq'])->name('store.teacherReq');
     Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
+
+    // Class Details Route
+    Route::get('/classDetails/{id}', [ClassController::class, 'classDetails'])->name('class.details');
 });
 
 require __DIR__ . '/auth.php';
