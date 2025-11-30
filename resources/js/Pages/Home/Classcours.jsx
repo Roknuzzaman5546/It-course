@@ -50,7 +50,7 @@ const Classcourse = ({classData}) => {
 
                 {/* CTA Button */}
                 <div className="flex justify-center" data-aos="fade-up">
-                    <a href="/all-class">
+                    <a href="/allClasses">
                         <button className="px-8 py-3.5 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105 flex items-center gap-2">
                             <span>Explore All Classes</span>
                             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
