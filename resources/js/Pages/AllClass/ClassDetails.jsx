@@ -3,6 +3,7 @@ import { Star, Clock, Users, Award, CheckCircle, ShoppingCart, ArrowLeft, Heart 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Main from '@/Layouts/Main';
+import { Head } from '@inertiajs/react';
 
 // ClassDetails Component
 const ClassDetails = ({ classData, auth }) => {
@@ -41,6 +42,7 @@ const ClassDetails = ({ classData, auth }) => {
 
     return (
         <Main auth={auth}>
+            <Head title="Details" />
             <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900">
                 {/* Hero Section */}
                 <div className="py-20 relative h-[450px] bg-gradient-to-r from-slate-800 to-slate-900 flex items-center justify-center overflow-hidden">
@@ -219,6 +221,7 @@ const CheckoutPage = ({ classData, auth, onBack }) => {
 
     return (
         <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 py-12">
+            <Head title="Pay out" />
             <div className="w-11/12 mx-auto">
                 {/* Back Button */}
                 <button
