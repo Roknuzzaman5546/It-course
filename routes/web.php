@@ -34,7 +34,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::group(['middleware' => ['auth']], function () {
+Route::group(['middleware' => ['auth', 'admin']], function () {
     Route::get('/aboutUs', [HomeController::class, 'aboutIndex'])->name('about.us');
     Route::get('/techIt', [HomeController::class, 'techIndex'])->name('tech.it');
     Route::post('/techIt', [TeachersController::class, 'storeTeacherReq'])->name('store.teacherReq');
