@@ -80,6 +80,13 @@ const Navbar = ({ auth }) => {
                                         <p className="text-white font-semibold text-sm">{auth?.user?.name}</p>
                                     </div>
                                     <a
+                                        href={route('profile.edit')}
+                                        className="flex items-center gap-3 px-4 py-2.5 text-gray-300 hover:text-white hover:bg-blue-500 hover:bg-opacity-20 transition-all"
+                                    >
+                                        <LayoutDashboard className="w-4 h-4" />
+                                        Profile
+                                    </a>
+                                    <a
                                         href="/dashboard/studentprofile"
                                         className="flex items-center gap-3 px-4 py-2.5 text-gray-300 hover:text-white hover:bg-blue-500 hover:bg-opacity-20 transition-all"
                                     >
