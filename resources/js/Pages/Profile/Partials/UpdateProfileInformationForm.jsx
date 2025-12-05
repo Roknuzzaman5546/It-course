@@ -8,19 +8,20 @@ import { CheckCircle, Save } from 'lucide-react';
 
 export default function UpdateProfileInformation({ mustVerifyEmail, status, className = '' }) {
     const user = usePage().props.auth.user;
-    console.log(user);
 
     const { data, setData, patch, errors, processing, recentlySuccessful } = useForm({
         name: user.name,
         email: user.email,
         phone: user.phone || '',
         profile: user.profile || '',
-        profilePhoto: null
+        profilePhoto: null,
     });
 
     const submit = (e) => {
         e.preventDefault();
-        patch(route('profile.update'));
+        patch(route('profile.update'),{
+            forceFormData: true,
+        });
     };
 
     return (
@@ -37,6 +38,21 @@ export default function UpdateProfileInformation({ mustVerifyEmail, status, clas
                 {/* Avatar Upload */}
                 <div>
                     <label className="block text-sm font-semibold text-gray-300 mb-3">Profile Picture</label>
+                    <div className="flex items-center gap-6">
+                        <div className="w-20 h-20 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center text-white font-bold text-2xl shadow-lg border-4 border-slate-700">
+                            {data.name ? data.name.charAt(0).toUpperCase() : 'U'}
+                        </div>
+                        <label className="flex items-center justify-center w-full px-4 py-3 bg-slate-700 border-2 border-dashed border-slate-600 rounded-lg cursor-pointer hover:border-blue-500 hover:bg-slate-600 transition-all">
+                            <input
+                                type="file"
+                                name="profilePhoto"
+                                onChange={(e) => setData('profilePhoto', e.target.files[0])}
+                                className='hidden'
+                                accept="image/*"
+                            />
+                            <span className="text-gray-300 font-semibold">Change Avatar</span>
+                        </label>
+                    </div>
                 </div>
 
                 {/* Name Field */}
