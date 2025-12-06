@@ -4,9 +4,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use DB;
 use Illuminate\Support\Facades\Auth;
+use Inertia\Inertia;
 
 class TeachersController extends Controller
 {
+    public function techIndex()
+    {
+        return Inertia::render('Techonit/Techonitbd');
+    }
     public function storeTeacherReq(Request $request)
     {
         $request->validate([

@@ -18,10 +18,6 @@ class HomeController extends Controller
         $classesData = DB::table('courses')->get();
         return Inertia::render('AllClass/Allclasses', compact( 'classesData'));
     }
-    public function techIndex()
-    {
-        return Inertia::render('Techonit/Techonitbd');
-    }
     public function aboutIndex()
     {
         return Inertia::render('About/AboutUs');

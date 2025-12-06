@@ -26,7 +26,7 @@ Route::middleware('auth')->group(function () {
 
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/aboutUs', [HomeController::class, 'aboutIndex'])->name('about.us');
-    Route::get('/techIt', [HomeController::class, 'techIndex'])->name('tech.it');
+    Route::get('/techIt', [TeachersController::class, 'techIndex'])->name('tech.it');
     Route::post('/techIt', [TeachersController::class, 'storeTeacherReq'])->name('store.teacherReq');
     Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
 
