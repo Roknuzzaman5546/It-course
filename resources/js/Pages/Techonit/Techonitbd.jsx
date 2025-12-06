@@ -5,7 +5,7 @@ import TextInput from "@/Components/TextInput";
 import Main from "@/Layouts/Main";
 import { Head, useForm } from "@inertiajs/react";
 import Swal from "sweetalert2";
-import { BookOpen, User, Briefcase, Grid3x3 } from 'lucide-react';
+import { BookOpen, User, Briefcase, Grid3x3, BookText, Captions } from 'lucide-react';
 
 const Title = ({ Subheading, heading }) => (
     <div className="mb-16 mt-8">
@@ -28,13 +28,14 @@ const Title = ({ Subheading, heading }) => (
     </div>
 );
 
-const Techonitdb = ({ auth }) => {
+const Techonitdb = ({ auth, teacher_applications }) => {
     const { data, setData, processing, errors, post, reset } = useForm({
-        name: undefined,
+        name: auth.user ? auth.user.name : '',
         title: undefined,
-        experience: undefined,
-        category: undefined
+        cv_url: undefined,
+        bio: undefined
     });
+    console.log(teacher_applications);
 
     const submit = (e) => {
         e.preventDefault();
@@ -104,7 +105,7 @@ const Techonitdb = ({ auth }) => {
 
                                     <div>
                                         <label className="block text-sm font-semibold text-gray-300 mb-3 flex items-center gap-2">
-                                            <Briefcase className="w-4 h-4 text-blue-400" />
+                                            <Captions className="w-4 h-4 text-blue-400" />
                                             Professional Title
                                         </label>
                                         <TextInput
@@ -120,47 +121,45 @@ const Techonitdb = ({ auth }) => {
                                         <InputError message={errors.title} className="mt-2 text-red-400 text-sm" />
                                     </div>
                                 </div>
-
-                                {/* Experience & Category Row */}
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <div>
                                         <label className="block text-sm font-semibold text-gray-300 mb-3 flex items-center gap-2">
-                                            <Briefcase className="w-4 h-4 text-blue-400" />
-                                            Experience Level
+                                            <BookText className="w-4 h-4 text-blue-400" />
+                                            Cv Url *
                                         </label>
-                                        <select
-                                            value={data.experience || ''}
-                                            onChange={(e) => setData('experience', e.target.value)}
-                                            className="w-full px-4 py-2.5 bg-slate-700 border border-slate-600 text-white rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-all cursor-pointer appearance-none"
-                                        >
-                                            <option value="">Select your experience level</option>
-                                            <option value="Beginner">Beginner</option>
-                                            <option value="Some idea">Some Idea</option>
-                                            <option value="Experienced">Experienced</option>
-                                        </select>
-                                        <InputError message={errors.experience} className="mt-2 text-red-400 text-sm" />
+                                        <TextInput
+                                            id="cv_url"
+                                            type="text"
+                                            name="cv_url"
+                                            value={data.cv_url || ''}
+                                            placeholder="Enter your Cv Drive link or Any hosted link"
+                                            className="w-full px-4 py-2.5 bg-slate-700 border border-slate-600 text-white rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-all"
+                                            autoComplete="cv_url"
+                                            isFocused={true}
+                                            onChange={(e) => setData('cv_url', e.target.value)}
+                                        />
+                                        <InputError message={errors.cv_url} className="mt-2 text-red-400 text-sm" />
                                     </div>
 
                                     <div>
                                         <label className="block text-sm font-semibold text-gray-300 mb-3 flex items-center gap-2">
-                                            <Grid3x3 className="w-4 h-4 text-blue-400" />
-                                            Teaching Category
+                                            <Briefcase className="w-4 h-4 text-blue-400" />
+                                            Bio
                                         </label>
-                                        <select
-                                            value={data.category || ''}
-                                            onChange={(e) => setData('category', e.target.value)}
-                                            className="w-full px-4 py-2.5 bg-slate-700 border border-slate-600 text-white rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-all cursor-pointer appearance-none"
-                                        >
-                                            <option value="">Select a category</option>
-                                            <option value="Data entry">Data Entry</option>
-                                            <option value="Learn basic js">Learn Basic JS</option>
-                                            <option value="Graphic Design">Graphic Design</option>
-                                            <option value="Digital marketing">Digital Marketing</option>
-                                            <option value="Web development">Web Development</option>
-                                        </select>
-                                        <InputError message={errors.category} className="mt-2 text-red-400 text-sm" />
+                                        <TextInput
+                                            id="bio"
+                                            type="text"
+                                            name="bio"
+                                            value={data.bio || ''}
+                                            placeholder="e.g. Senior Developer, Designer"
+                                            className="w-full px-4 py-2.5 bg-slate-700 border border-slate-600 text-white rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-all"
+                                            autoComplete="bio"
+                                            onChange={(e) => setData('bio', e.target.value)}
+                                        />
+                                        <InputError message={errors.bio} className="mt-2 text-red-400 text-sm" />
                                     </div>
                                 </div>
+
 
                                 {/* Submit Button */}
                                 <div className="pt-4">
