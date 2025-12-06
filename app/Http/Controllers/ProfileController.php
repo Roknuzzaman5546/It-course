@@ -33,7 +33,7 @@ class ProfileController extends Controller
         $user->fill($request->validated());
         if ($request->hasFile('profilePhoto')) {
             $path = $request->file('profilePhoto')->store('uploads', 'public');
-            $user->profilePhoto = 'http://127.0.0.1:8000/storage/'.$path;
+            $user->profilePhoto = $path;
         }
         $user->save();
         return Redirect::route('profile.edit');

@@ -2,8 +2,8 @@ import { Link, useForm, usePage } from '@inertiajs/react';
 import { CheckCircle, Save, Upload, X } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
-export default function UpdateProfileInformation({ mustVerifyEmail, status, className = '' }) {
-    const user = usePage().props.auth.user;
+export default function UpdateProfileInformation({ mustVerifyEmail, status, user, className = '' }) {
+    const { settings } = usePage().props;
     const [previewImage, setPreviewImage] = useState(null);
 
     const { data, setData, post, errors, processing, recentlySuccessful } = useForm({
@@ -25,7 +25,7 @@ export default function UpdateProfileInformation({ mustVerifyEmail, status, clas
         const file = e.target.files?.[0];
         if (file) {
             setData('profilePhoto', file);
-            
+
             // Create preview URL for the new image
             const reader = new FileReader();
             reader.onloadend = () => {
@@ -72,16 +72,16 @@ export default function UpdateProfileInformation({ mustVerifyEmail, status, clas
                         <div className="relative">
                             <div className="w-24 h-24 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center text-white font-bold text-3xl shadow-lg border-4 border-blue-400 overflow-hidden flex-shrink-0">
                                 {previewImage ? (
-                                    <img 
-                                        src={`/uploads/${previewImage}`} 
-                                        alt="Preview" 
+                                    <img
+                                        src={`${settings.set}${previewImage}`}
+                                        alt="Preview"
                                         className="w-full h-full object-cover"
                                     />
                                 ) : (
                                     <span>{data.name ? data.name.charAt(0).toUpperCase() : 'U'}</span>
                                 )}
                             </div>
-                            
+
                             {/* Remove Image Button */}
                             {previewImage && data.profilePhoto && (
                                 <button
@@ -109,7 +109,7 @@ export default function UpdateProfileInformation({ mustVerifyEmail, status, clas
                                     <p className="text-gray-300 font-semibold group-hover:text-blue-400 transition-colors">
                                         Click to upload or drag and drop
                                     </p>
-                                    <p className="text-gray-500 text-sm mt-1">PNG, JPG, GIF up to 10MB</p>
+                                    <p className="text-gray-500 text-sm mt-1">PNG, JPG, GIF up to 2MB</p>
                                 </div>
                             </label>
                             {errors.profilePhoto && (
