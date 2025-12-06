@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { Menu, X, ChevronDown, LogOut, User, LayoutDashboard } from 'lucide-react';
+import { usePage } from '@inertiajs/react';
 
 const Navbar = ({ auth }) => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [dropdownOpen, setDropdownOpen] = useState(false);
+    const { settings } = usePage().props;
 
     const menu = [
         { label: 'Home', href: '/', route: '/' },
@@ -69,7 +71,7 @@ const Navbar = ({ auth }) => {
                             <div className="relative group hidden md:block">
                                 <button className="flex items-center gap-2 px-3 py-2 rounded-full bg-slate-700 hover:bg-slate-600 transition-colors">
                                     <img
-                                        src={auth?.user?.profilePhoto || "/assets/user.png"}
+                                        src={`${auth?.user?.profilePhoto}` || `${"/assets/user.png"} `}
                                         alt="Profile"
                                         className="w-8 h-8 rounded-full object-cover border-2 border-blue-400"
                                     />

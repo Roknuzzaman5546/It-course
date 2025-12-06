@@ -30,19 +30,15 @@ class ProfileController extends Controller
     public function update(ProfileUpdateRequest $request): RedirectResponse
     {
         $user = $request->user();
-        $request->user()->fill($request->validated());
-        if ($request->user()->isDirty('email')) {
-            $request->user()->email_verified_at = null;
-        }
+        $user->fill($request->validated());
         if ($request->hasFile('profilePhoto')) {
             $path = $request->file('profilePhoto')->store('uploads', 'public');
-            $user->profilePhoto = $path;
+            $user->profilePhoto = 'http://127.0.0.1:8000/storage/'.$path;
         }
-
-        $request->user()->save();
-
+        $user->save();
         return Redirect::route('profile.edit');
     }
+
 
     /**
      * Delete the user's account.

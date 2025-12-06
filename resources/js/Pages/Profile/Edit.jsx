@@ -42,6 +42,7 @@ export default function Edit({ auth, mustVerifyEmail, status }) {
                         className="bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 rounded-2xl p-8 shadow-2xl hover:border-blue-500 hover:shadow-2xl transition-all duration-300"
                     >
                         <UpdateProfileInformationForm
+                            user={auth.user}
                             mustVerifyEmail={mustVerifyEmail}
                             status={status}
                         />
