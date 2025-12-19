@@ -15,8 +15,32 @@ class HomeController extends Controller
     }
     public function allclassIndex()
     {
+        $string = "Hello, World!";
+        $reversedString = strrev($string);
+
+        function isPrime($num)
+        {
+            if ($num <= 1) {
+                return false;
+            }
+            for ($i = 2; $i < $num; $i++) {
+                if ($num % $i == 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+        $str = "Interview";
+        $rev = [];
+        for ($i = 0; $i < strlen($str); $i++) {
+            $char = $str[$i];
+            $rev[$char] = ($rev[$char] ?? 0) + 1;
+        }
+        print_r($rev);
+
+
         $classesData = DB::table('courses')->get();
-        return Inertia::render('AllClass/Allclasses', compact( 'classesData'));
+        return Inertia::render('AllClass/Allclasses', compact('classesData'));
     }
     public function aboutIndex()
     {
