@@ -15,59 +15,36 @@ class HomeController extends Controller
 
     public function allclassIndex()
     {
-        $string = "Hello, World!";
-        $reversedString = strrev($string);
-        
-        function isPrime($num){
-            if($num <= 1) return false;
-            for($i = 2; $i <= sqrt($num); $i++){
-                if($num % $i == 0) return false;
+        class Car {
+            public $color;
+            public $brand;
+
+            public function start(){
+                return "The car is starting";
             }
-            return true;
-        }
-        
-        $itsPrime = [];
-        for ($n = 0; $n <= 40; $n++) {
 
-            if (isPrime($n)) {
-                $itsPrime[] = $n;
-            }
         }
 
-
-        $input = "Laravel Interview";
-        $reverse = [];
-        for ($i = strlen($input) -1; $i >=0; $i --){
-            $reverse[] = $input[$i];
-        }
-
-
-        $numbers = [12, 7, 9, 20, 33, 42, 55];
-
-        $result =[
-            'even' => 0,
-            'odd' => 0
-        ];
-
-        foreach ($numbers as $number){
-            if ($number % 2 ==0){
-                $result['even']++;
-            } else {
-                $result['odd']++;
-            }
-        }
+        $car = new Car();
+        $car->color = "red";
+        $car->brand = "Toyota";
+        $carStatus = $car->start();
+        dd($carStatus);
 
 
-        print_r($result);
 
 
-        $str = "Interview";
-        $rev = [];
-        for ($i = 0; $i < strlen($str); $i++) {
-            $char = $str[$i];
-            $rev[$char] = ($rev[$char] ?? 0) + 1;
-        }
 
+
+
+
+
+
+
+
+
+
+        // main all class section
         $classesData = DB::table('courses')->get();
         return Inertia::render('AllClass/Allclasses', compact('classesData'));
     }
