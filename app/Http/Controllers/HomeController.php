@@ -15,39 +15,11 @@ class HomeController extends Controller
 
     public function allclassIndex()
     {
-        class Car {
-            public $color;
-            public $brand;
-
-            public function start(){
-                return "The car is starting";
-            }
-
-        }
-
-        $car = new Car();
-        $car->color = "red";
-        $car->brand = "Toyota";
-        $carStatus = $car->start();
-        dd($carStatus);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         // main all class section
         $classesData = DB::table('courses')->get();
         return Inertia::render('AllClass/Allclasses', compact('classesData'));
     }
+
     public function aboutIndex()
     {
         return Inertia::render('About/AboutUs');
@@ -56,14 +28,17 @@ class HomeController extends Controller
     {
         return Inertia::render('Faq/Faq');
     }
+
     public function conditionIndex()
     {
         return Inertia::render('Terms&Condition/Condition');
     }
+
     public function privecyIndex()
     {
         return Inertia::render('PrivecyPolicy/Privecy');
     }
+    
     public function contactIndex()
     {
         return Inertia::render('Contact/ContactUs');
